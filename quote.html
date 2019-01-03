@@ -175,9 +175,13 @@
       </header>
       <!-- End Header -->
 
-    
-    <iframe src="https://www.123formbuilder.com/form-2859244/RequestQuote/" width="100%" height="800vh" frameBorder="0">
-    </iframe>
+
+      <div class="container">
+<!-- www.123formbuilder.com script begins here -->
+<script type="text/javascript" defer src="https://www.123formbuilder.com/embed/2859244.js" data-role="form" data-default-width="650px"></script>
+<!-- www.123formbuilder.com script ends here -->				
+      </div>
+  
     <!-- Footer -->
     <div id="contacts-section" class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
       <div class="container">
@@ -314,7 +318,14 @@
 
 
 
-
+      <!-- Google Analytics -->
+      <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-62852370-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <!-- End Google Analytics -->
 
   <!-- JS Global Compulsory -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -344,53 +355,6 @@
 
   <!-- JS Plugins Init. -->
   <script>
-
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-62852370-1', 'auto');
-    ga(function(tracker) {
-      // Gets the client ID of the default tracker.
-      var clientId = tracker.get('clientId');
-    
-      // Gets a reference to the window object of the destionation iframe.
-      var frameWindow = document.getElementById('destination-frame').contentWindow;
-    
-      // Sends the client ID to the window inside the destination frame.
-      frameWindow.postMessage(clientId, 'https://www.123formbuilder.com/form-2859244/RequestQuote/');
-    });
-
-    // Stores whether or not the tracker has been created.
-    var trackerCreated = false;
-
-    function createTracker(opt_clientId) {
-      if (!trackerCreated) {
-        var fields = {};
-        if (opt_clientId) {
-          fields.clientId = opt_clientId;
-        }
-
-        ga('create', 'UA-62852370-1', 'auto', fields);
-        trackerCreated = true;
-      }
-    }
-
-
-    window.addEventListener('message', function(event) {
-      // Ignores messages from untrusted domains.
-      if (event.origin != 'https://www.123formbuilder.com/form-2859244/RequestQuote/') return;
-
-      // Creates the tracker with the data from the parent page.
-      createTracker(event.data);
-    });
-
-
-    // Waits for three seconds to receive the client ID from the parent page.
-    // If that doesn't happen, it creates the tracker as normal.
-    setTimeout(createTracker, 3000);
-
-
     $(document).on('ready', function () {
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
