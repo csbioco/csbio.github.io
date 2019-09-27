@@ -570,7 +570,14 @@
       
       
       
-      
+   <script>
+  window.addEventListener('load',function(){
+    jQuery('[src="assets/img/button_download.png"]').click(function(){
+      ga('send','event','download','click',jQuery(this).parents('.g-py-20').find('.u-heading-v2__title').text());   
+
+    })
+  })
+</script>   
       
       
       </body>
