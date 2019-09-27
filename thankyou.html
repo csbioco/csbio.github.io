@@ -472,7 +472,14 @@
 
 
 
-
+<script>
+  window.addEventListener('load',function(){
+    if(window.location.pathname=="/thankyou.html")
+    {
+      ga('send','event','form','submit','quote',{'nonInteraction':true});
+    }
+  })
+</script>
 </body>
 
 </html>
