@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Title -->
+  <title>Synthesizing a 132-mer peptide with high purity on CSBio's research scale peptide synthesizers</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/vendor/icon-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/vendor/icon-line-pro/style.css">
+  <link rel="stylesheet" href="../assets/vendor/icon-line/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../assets/vendor/icon-hs/style.css">
+  <link rel="stylesheet" href="../assets/vendor/animate.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/jquery.fancybox.css">
+  <link rel="stylesheet" href="../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../assets/vendor/hamburgers/hamburgers.min.css">
+
+  <!-- CSS Unify -->
+  <link rel="stylesheet" href="../assets/css/unify-core.css">
+  <link rel="stylesheet" href="../assets/css/unify-components.css">
+  <link rel="stylesheet" href="../assets/css/unify-globals.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+
+<body>
+  <main>
+
+
+
+      <!-- Header -->
+      <header id="js-header" class="u-header u-header--static">
+        <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10">
+          <nav class="js-mega-menu navbar navbar-expand-lg hs-menu-initialized hs-menu-horizontal">
+            <div class="container">
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-minus-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+                <span class="hamburger hamburger--slider">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+                </span>
+                </span>
+              </button>
+              <!-- End Responsive Toggle Button -->
+  
+              <!-- Logo -->
+              <a href="index.html" class="navbar-brand d-flex">
+                  <img width="46px" height="46px" src="../assets/img/favicon.png"> 
+              </a>
+                <!-- End Logo -->
+  
+              <!-- Navigation -->
+              <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
+                <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+                  <!-- Home -->
+                  <li class="nav-item  g-mx-10--lg g-mx-15--xl">
+                    <a href="../index.html" class="nav-link g-py-7 g-px-0">Home</a>
+                  </li>
+                  <!-- End Home -->
+  
+                  <!-- Peptides -->
+                  <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                    <a id="nav-link--features" class="nav-link g-py-7 g-px-0" href="../peptides.html" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Peptides</a>
+  
+                    <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling" id="nav-submenu--features" aria-labelledby="nav-link--features">
+                      <!-- Peptides - Commercial -->
+                      <li class="dropdown-item ">
+                        <a class="nav-link" href="../peptides.html#commercial">Commercial</a>
+                      </li>
+                      <!-- End Peptides - Commercial -->
+                      <!-- Peptides - Clinical -->
+                      <li class="dropdown-item ">
+                        <a class="nav-link" href="../peptides.html#clinical">Clinical</a>
+                      </li>
+                      <!-- End Peptides - Clinical -->
+                      <!-- Peptides - Custom -->
+                      <li class="dropdown-item ">
+                        <a class="nav-link" href="../peptides.html#custom">Non-clinical</a>
+                      </li>
+                      <!-- End Peptides - Custom -->
+                      <!-- Peptides - Analytical -->
+                      <li class="dropdown-item ">
+                        <a class="nav-link" href="../peptides.html#analytical">Analytical</a>
+                      </li>
+                      <!-- End Peptides - Analytical -->
+                    </ul>
+                  </li>
+                  <!-- End Peptides -->
+   <!-- Instrumentation -->
+                <li class="hs-has-sub-menu nav-item  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                  <a id="nav-link-pages" class="nav-link g-py-7 g-px-0" href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-pages">Instrumentation</a>
+                  
+                  <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling" id="nav-submenu-pages" aria-labelledby="nav-link-pages">
+                    <!-- Pages - Peptide Synthesizers -->
+                    <li class="dropdown-item hs-has-sub-menu ">
+                      <a id="nav-link--pages--peptidesyn" class="nav-link" href="../synthesizer.html" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--pages--peptidesyn">Peptide Synthesizers</a>
+
+                      <!-- Submenu (level 2) -->
+                      <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-minus-2" id="nav-submenu--pages--peptidesyn" aria-labelledby="nav-link--pages--peptidesyn">
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../synthesizer.html#research">Research Scale</a>
+                        </li>
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../synthesizer.html#high">High Throughput</a>
+                        </li>
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../synthesizer.html#pilot">Pilot Scale</a>
+                        </li>
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../synthesizer.html#commercial">Commercial Scale</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu (level 2) -->
+                    </li>
+                    <!-- End Pages - Peptide Synthesizers -->
+
+                    <!-- Pages - DNA Synthesizers -->
+                    <li class="dropdown-item hs-has-sub-menu ">
+                      <a id="nav-link--pages--dnasyn" class="nav-link" href="../dna.html" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--pages--dnasyn">DNA Synthesizers</a>
+
+                      <!-- Submenu (level 2) -->
+                      <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-minus-2" id="nav-submenu--pages--dnasyn" aria-labelledby="nav-link--pages--dnasyn">
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../dna.html#dnapilot">Pilot Scale</a>
+                        </li>
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../dna.html#dnaprocess">Process Scale</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu (level 2) -->
+                    </li>
+                    <!-- End Pages - DNA Synthesizers -->
+
+                    <!-- Pages - Preparative Purification -->
+                    <li class="dropdown-item hs-has-sub-menu ">
+                      <a id="nav-link--pages--purf" class="nav-link" href="../prep.html" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--pages--purf">Preparative HPLC</a>
+
+                      <!-- Submenu (level 2) -->
+                      <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-minus-2" id="nav-submenu--pages--purf" aria-labelledby="nav-link--pages--purf">
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../prep.html#packer">Column Packer</a>
+                        </li>
+                        <li class="dropdown-item ">
+                          <a class="nav-link" href="../prep.html#columns">DAC Columns</a>
+                        </li>
+                      </ul>
+                      <!-- End Submenu (level 2) -->
+                    </li>
+                    <!-- End Pages - Preparative Purification -->
+                  </ul>
+                </li>
+    <!-- End Instrumentation -->
+  
+                   <!-- Blog -->
+                   <li class="nav-item g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                    <a href="../blog.html" id="nav-link--features" class="nav-link g-py-7 g-px-0"  aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Resources</a>
+                  </li>
+                  <!-- End Blog -->
+
+                   <!-- Online Shop -->
+                   <li class="nav-item g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                    <a href="../shop.html" id="nav-link--features" class="nav-link g-py-7 g-px-0"  aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Online Shop</a>
+                  </li>
+                  <!-- End Online Shop -->
+
+
+                   <!-- Contact -->
+                   <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                    <a id="nav-link--features"  class="nav-link g-py-7 g-px-0" href="#!" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">ABOUT</a>
+  
+                    <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling" id="nav-submenu--features" aria-labelledby="nav-link--features">
+                      <!-- Contact - Offices -->
+                      <li class="dropdown-item ">
+                        <a class="nav-link" href="../offices.html">Offices</a>
+                      </li>
+                      <!-- End Features - Offices -->
+
+                      <!-- Features - Careers -->
+                      <li class="dropdown-item ">
+                        <a class="nav-link" href="../careers.html">Careers</a>
+                      </li>
+                      <!-- End Features - Careers -->
+  
+                    </ul>
+                  </li>
+                  <!-- End Contact -->
+
+                     <!-- Info -->
+                     <li class="nav-item g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                      <a href="../quote.html" id="nav-link--features" class="nav-link g-py-7 g-px-0"  aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features"><Strong><font color="#2f3192">Request More Info</Strong></font></a>
+                    </li>
+                    <!-- End Info -->
+                </ul>
+              </div>
+              <!-- End Navigation -->
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- End Header -->
+
+    <!-- Blog Single Item Banner -->
+    <section class="g-bg-cover g-bg-size-cover g-bg-white-gradient-opacity-v1--after" data-bg-img-src="">
+      <div class="container text-center g-pos-rel g-z-index-1 g-pb-50">
+        <div class="row d-flex justify-content-center align-content-end flex-wrap g-min-height-500">
+          <div class="col-lg-7 mt-auto">
+            <div class="mb-5">
+              <h1 class="g-color-white g-font-weight-600 g-mb-30">Synthesizing a 132-mer peptide with high purity</h1>
+              <p class="lead g-color-white-opacity-0_6">Using a CSBio research scale peptide synthesizer, we share a case study of how a 132-mer peptide can be synthesized with high purity</p>
+            </div>
+            <span class="g-color-white-opacity-0_7 g-font-weight-300 g-font-size-12">Resources</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Blog Single Item Banner -->
+
+    <!-- Blog Single Item Info -->
+    <section class="container g-pt-100 g-pb-60">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="g-mb-60">
+            <h2 class="g-color-black g-font-weight-600 text-center g-mb-30">Introduction</h2>
+            <p>Synthesis of peptides at any length requires extreme attention to detail for accuracy and purity of the desired compound. Correctly synthesizing peptides of 50 mer length is difficult, over 100 mer length is a remarkable feat. CSBio’s fully automated instruments are purposefully designed to maximize resin and solvent interaction while maintaining a clean system throughout the synthesis protocol, making it possible to consistently synthesize peptides containing over 130 amino acids at very high purities.</p>
+          </div>
+
+          <div class="g-mb-60">
+            <h2 class="g-color-black g-font-weight-600 text-center g-mb-30">Brief</h2>
+            <p>The chemists in CSBio’s in-house cGMP peptide manufacturing facility were tasked with making a cyclic peptide 132 amino acids in length containing a Cysteine to Cysteine disulfide bond linking the 39th and 79th amino acids.</p>
+            <br>
+            <p><img class="img-fluid" src="../assets/img/blog/132mer.jpg" alt="Image Description"></p>
+            <p><b><center>132 AA peptide sequence (protected)</center></b></p>
+            <br>
+
+            <div class="row">
+            <div class="col-md-6 g-mb-20">
+                <p style="margin-top:90px">Using a research scale CSBio peptide synthesizer, Fmoc protected amino acids were attached one by one in a stepwise fashion. Engineering decisions such as  180° inversion mixing as well as dedicated lines to separate the delivery of amino acids and piperidine ensure more resin to solvent interaction than nitrogen bubbling, vortex or oscillation mixing, while also maximizing coupling with no risk of chemical cross contamination.</p>
+            </div>
+            <div class="col-md-6 g-mb-20">
+              <img class="img-fluid" src="../assets/img/blog/136x.jpg" alt="Image Description">
+              <p><b><center>CSBio CS136X</center></b></p>
+            </div>
+          </div>
+            <p>Upon peptide synthesis completion the resin was cleaved giving the chemist’s 620mg of crude at 75% purity. A portion of the crude (220mg) was loaded into a 1” C18 HPLC column, cyclization of the fractions was performed using an iodine.  Post purification the chemists were able to extract 18mg of the re-purified disulfide peptide which tested at 98.7% purity. Resulting in an 8.2% yield from crude for a compound whose molecular weight was >15000g/mol. </p>
+          </div>
+<div class="row">
+            <div class="col-md-6 g-mb-0">
+              <img class="img-fluid" src="../assets/img/blog/hplclongmer.jpg" alt="Image Description">
+            </div>
+            <div class="col-md-6 g-mb-0">
+              <img class="img-fluid" style="margin-top:50px" src="../assets/img/blog/hplclongmertable.jpg" alt="Image Description">
+            </div>
+          </div>
+            <p><b><center>132mer post-purification chromatogram</center></b></p>
+            <br>
+
+
+          <div class="g-mb-60">
+            <h2 class="g-color-black g-font-weight-600 text-center g-mb-30">Conclusion</h2>
+            <p>CSBio synthesizers are designed to deliver the user with the highest crude quality for any possible peptide. As the only automated synthesizer manufacturer that produces cGMP peptides, constant collaboration of in-house chemists and engineers during the design process enables CSBio to improve synthesis results compared to industry competitors; making CSBio synthesizers the most robust and reliable instruments on the market for synthesis of any peptide.</p> 
+            <p>Interested in our research scale peptide synthesizers? <a href="../quote.html">Get in touch with us.</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Blog Single Item Info -->
+
+
+          <!-- Social Icons -->
+          <div class="text-center">
+            <h3 class="h6 g-color-black g-font-weight-600 text-uppercase mb-3">Share:</h3>
+            <ul class="list-inline g-mb-60">
+              <li class="list-inline-item g-mx-2">
+                <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-twitter--hover" href="#">
+                  <i class="g-font-size-default g-line-height-1 u-icon__elem-regular fa fa-twitter"></i>
+                  <i class="g-font-size-default g-line-height-0_8 u-icon__elem-hover fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item g-mx-2">
+                <a class="u-icon-v1 u-icon-slide-up--hover g-color-gray-dark-v4 g-color-linkedin--hover" href="#">
+                  <i class="g-font-size-default g-line-height-1 u-icon__elem-regular fa fa-linkedin"></i>
+                  <i class="g-font-size-default g-line-height-0_8 u-icon__elem-hover fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Social Icons -->
+        </div>
+      </div>
+    </section>
+    <!-- End Blog Single Item Author -->
+
+
+
+      <!-- Footer -->
+      <div id="contacts-section" class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
+        <div class="container">
+          <div class="row">
+            <!-- Footer Content -->
+            <div class="col-md-4 g-mb-40 g-mb-0--lg">
+              <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                <h2 class="u-heading-v2__title h6 text-uppercase mb-0">About Us</h2>
+              </div>
+  
+              <p>CSBio is a leading peptide and instrumentation manufacturing company located on the edge of Silicon Valley in Menlo Park, California. <br> <br>CSBio provides nonGMP and cGMP peptides, peptide APIs, research scale peptide synthesizers, commerical scale peptide synthesizers, DNA/RNA oligonucleotide synthesizers, and preparative HPLC purification equipment.</p>
+            </div>
+            <!-- End Footer Content -->
+  
+            <!-- Footer Content -->
+  
+  
+            <!-- Footer Content -->
+            <div class="col-md-4 g-mb-40 g-mb-0--lg">
+              <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Useful Links</h2>
+              </div>
+  
+              <nav class="text-uppercase1">
+                <ul class="list-unstyled g-mt-minus-10 mb-0">
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                    <h4 class="h6 g-pr-20 mb-0">
+                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="../index.html">Home</a>
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+                  </li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                    <h4 class="h6 g-pr-20 mb-0">
+                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="../peptides.html">Peptides</a>
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+                  </li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                    <h4 class="h6 g-pr-20 mb-0">
+                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="../synthesizer.html">Instrumentation</a>
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+                  </li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                      <h4 class="h6 g-pr-20 mb-0">
+                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="../shop.html">Online Shop</a>
+                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                  </h4>
+                    </li>
+                  <li class="g-pos-rel g-py-10">
+                    <h4 class="h6 g-pr-20 mb-0">
+                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="../quote.html">Contact Us</a>
+                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                </h4>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- End Footer Content -->
+  
+            <!-- Footer Content -->
+            <div class="col-md-4">
+              <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Our Contacts</h2>
+              </div>
+  
+              <address class="g-bg-no-repeat g-font-size-12 mb-0" style="background-image: url(assets/img/maps/map2.png);">
+            <!-- Location -->
+            <div class="d-flex g-mb-20">
+              <div class="g-mr-10">
+                <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
+                  <i class="fa fa-map-marker"></i>
+                </span>
+              </div>
+              <p class="mb-0">20 Kelly Court<br> Menlo Park, CA 94025</p>
+            </div>
+            <!-- End Location -->
+  
+            <!-- Phone -->
+            <div class="d-flex g-mb-20">
+              <div class="g-mr-10">
+                <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
+                  <i class="fa fa-phone"></i>
+                </span>
+              </div>
+              <p class="mb-0"> <br> (+650) 322 1111<br> </p>
+            </div>
+            <!-- End Phone -->
+  
+            <!-- Email and Website -->
+            <div class="d-flex g-mb-20">
+              <div class="g-mr-10">
+                <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
+                  <i class="fa fa-globe"></i>
+                </span>
+              </div>
+              <p class="mb-0">
+                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="mailto:peptides@csbio.com">peptides@csbio.com</a>
+                <br>
+                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!">www.csbio.com</a>
+              </p>
+            </div>
+            <!-- End Email and Website -->
+          </address>
+            </div>
+            <!-- End Footer Content -->
+          </div>
+        </div>
+      </div>
+      <!-- End Footer -->
+  
+      <!-- Copyright Footer -->
+      <footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
+              <div class="d-lg-flex">
+                <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2018 &copy; All Rights Reserved.</small>     
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Copyright Footer -->
+
+    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
+     "bottom": 15,
+     "right": 15
+   }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+      <i class="hs-icon hs-icon-arrow-top"></i>
+    </a>
+  </main>
+
+  <div class="u-outer-spaces-helper"></div>
+
+      <!-- Google Analytics -->
+      <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-62852370-1', 'auto');
+      ga('send', 'pageview');
+      </script>
+      <script async src='https://www.google-analytics.com/analytics.js'></script>
+      <!-- End Google Analytics -->
+
+  <!-- JS Global Compulsory -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="../assets/vendor/popper.js/popper.min.js"></script>
+  <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+
+  <!-- JS Implementing Plugins -->
+  <script src="../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="../assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+
+  <!-- JS Unify -->
+  <script src="../assets/js/hs.core.js"></script>
+  <script src="../assets/js/components/hs.header.js"></script>
+  <script src="../assets/js/helpers/hs.hamburgers.js"></script>
+  <script src="../assets/js/components/hs.tabs.js"></script>
+  <script src="../assets/js/components/hs.popup.js"></script>
+  <script src="../assets/js/components/hs.go-to.js"></script>
+
+  <!-- JS Customization -->
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+        // initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+      });
+
+      $(window).on('load', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of HSMegaMenu component
+        $('.js-mega-menu').HSMegaMenu({
+          event: 'hover',
+          pageContainer: $('.container'),
+          breakpoint: 991
+        });
+      });
+
+      $(window).on('resize', function () {
+        setTimeout(function () {
+          $.HSCore.components.HSTabs.init('[role="tablist"]');
+        }, 200);
+      });
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
