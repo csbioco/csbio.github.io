@@ -76,7 +76,29 @@
         /* Ensure hero text sits above overlay */
         .commercial-hero-video-target + .container,
         .commercial-hero-video-target ~ .container { z-index: 3; }
-        /* Mobile: fall back to static image (hide heavy background video) */
+/* Mobile-only: make Vimeo behave like background-size: cover */
+@media (max-width: 768px) {
+  .commercial-hero-video-target {
+    position: relative;
+    height: 100% !important;   /* important for parallax target */
+    overflow: hidden;
+  }
+
+  .commercial-hero-video-iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    width: 140% !important;    /* bump from 120% for extra safety */
+    height: 140% !important;
+
+    border: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+
 
       </style>
 
@@ -227,7 +249,7 @@
             <div class="dzsparallaxer--target commercial-hero-video-target" style="width: 100%; height: 140%;">
 <iframe
   class="commercial-hero-video-iframe"
-  src="https://player.vimeo.com/video/1159419753?h=f9de5df018&background=1&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
+  src="https://player.vimeo.com/video/1159419753?h=f9de5df018&background=1&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&quality=720p"
   frameborder="0"
   allow="autoplay; fullscreen"
   title="CS936X Intro"
