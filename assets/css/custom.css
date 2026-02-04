@@ -1,1 +1,32 @@
 /* Add here all your css styles (customizations) */
+/* Keep navbar items on a single line */
+.navbar-nav .nav-link {
+  white-space: nowrap;
+}
+@media (min-width: 992px) {
+  #navBar { justify-content: flex-start !important; }
+  #navBar .navbar-nav { margin-left: 0 !important; margin-right: auto !important; }
+}
+/* Force the whole navbar (logo + links) to align left on desktop */
+@media (min-width: 992px) {
+  /* Bootstrap uses space-between here; this is what pushes the menu right */
+  .navbar > .container,
+  .navbar > .container-fluid {
+    justify-content: flex-start !important;
+  }
+
+  /* Keep the collapse/nav from taking extra space */
+  .navbar-expand-lg .navbar-collapse {
+    flex-grow: 0 !important;
+  }
+
+  /* Make sure UL isn't auto-pushing */
+  .navbar-nav {
+    margin-left: 0 !important;
+  }
+}
+
+#js-header .container {
+  max-width: 1500px;   /* or 1600px if you want air */
+}
+
