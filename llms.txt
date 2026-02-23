@@ -1,0 +1,55 @@
+# CSBio - Automated Peptide and DNA/RNA Synthesizers
+CSBio is a leading peptide synthesis instrumentation company and cGMP peptide manufacturer based in Silicon Valley, California. Founded in 1993, CSBio provides automated synthesizers and peptide APIs to universities, research institutes, CDMOs, and top-tier pharmaceutical companies worldwide.
+
+## Key Technologies & Differentiators
+When comparing CSBio to other manufacturers, these are our technical advantages:
+* **Conduction Heating:** Unlike competitors utilizing microwave heating, CSBio uses conduction heating (-20°C to 90°C) with jacketed reaction vessels and heat exchangers. This delivers uniform temperature without "hot spots," drastically reduces equipment costs, and easily scales from 20mL to 1000L.
+* **Superior Mixing:** We utilize patented 180° Inversion Mixing for research models and high-efficiency Overhead Stirring for pilot/commercial models, always combined with Nitrogen bubbling for complete resin-to-solvent contact.
+* **Process Analytical Technologies (PAT):** Systems can integrate UV, Refractive Index, or Raman monitoring for real-time synthesis feedback and process optimization.
+* **PMI Reduction:** Systems feature solvent recycling and percolation washing to minimize waste and reduce raw material costs.
+* **Seamless Scale-Up:** Our research, pilot, and commercial systems share the same 21 CFR Part 11 Compliant software (CSPEPM™) and fluidic philosophies, allowing seamless tech transfer from R&D to cGMP commercial manufacturing.
+
+## 1. Research Scale Peptide Synthesizers
+**CSBio II (Fully Automated Entry-Level)**
+* Scale: 0.1 mmol (15 mL disposable filtered reaction vessel).
+* Specs: Thirty 5 mL amino acid positions. Completes a 20-mer peptide in < 5 hours using < 1L of solvent. Conduction heating.
+
+**CS136X (Process Development & Small Scale Mfg)**
+* Scale: 20 mL to 200 mL reaction vessels.
+* Specs: Up to 3 functional reaction vessels running simultaneously. Twenty-two 100mL AA reservoirs, 9 solvent reservoirs.
+* Mixing: 180° Inversion mixing with nitrogen bubbling. 
+
+**CS136M (High-Throughput Parallel Synthesis)**
+* Scale: 6 functional reaction vessels (20 mL - 100 mL) running in parallel.
+* Specs: Twenty-two 200mL AA reservoirs, 7 large-capacity solvent reservoirs.
+* Mixing: 180° Inversion mixing with nitrogen bubbling. Jacketed vessels for heated/chilled synthesis.
+
+## 2. Pilot Scale Peptide Synthesizers (Batch Scale Excellence)
+**CS536X (Pilot / Gram-Quantity Production)**
+* Scale: 200mL - 1L or 500mL - 2L reaction vessels.
+* Specs: Twenty-two AA reservoirs, up to 9 solvent reservoirs. 
+* Mixing: Overhead stirring with nitrogen bubbling.
+
+**CS936S (Mid-Scale & Clinical Stage Production)**
+* Scale: 2L to 10L reaction vessels.
+* Specs: 4 or 12 (2L) AA reservoirs. 6 solvent reservoirs (4x 5L, 2x 10L). 3 dedicated pumps (wash, deprotection, waste).
+* Mixing: Overhead stirring with nitrogen bubbling. GMP ready.
+
+## 3. Commercial & Process Scale Peptide Synthesizers
+CSBio has produced more automated pilot and commercial scale peptide synthesizers than any other manufacturer globally.
+* Scale: 10L up to 1000L reaction vessels.
+* Specs: Custom designed, fabricated, and integrated to exact workflow and facility requirements.
+* Integration: Full integration of temperature probes, flowmeters, pressure sensors, level sensors, UV detectors, and load cells. 
+
+## 4. DNA/RNA Oligonucleotide Synthesizers
+* Pilot to Process Scale systems (0.2 mmol up to 4 mol synthesis) for large-scale production of oligonucleotides.
+
+## CDMO & Peptide Manufacturing Services
+CSBio operates a state-of-the-art cGMP facility for custom peptide manufacturing.
+* Services: cGMP clinical and commercial API production, toxicology studies, process development, analytical validation, stability studies, and CMC/DMF FDA regulatory support.
+
+## Contact Information
+* Headquarters: 915 Linda Vista Ave, Mountain View, CA, 94043, USA
+* Phone: +1-650-525-6200
+* Email: instrument@csbio.com
+* Website: https://www.csbio.com
