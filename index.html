@@ -3,30 +3,43 @@
   
   <head>
 
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1069035902"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-1069035902');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1069035902"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-1069035902');
+    </script>
 
     <!-- Title -->
-   <title>CSBio - Automated Peptide Synthesizers and Oligo Synthesizers</title>
+    <title>Automated Peptide Synthesizers | Research to Commercial Scale | CSBio</title>
+
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
+    <meta name="description" content="CSBio designs automated peptide synthesizers for research, pilot, GMP-ready clinical, and commercial-scale peptide synthesis from benchtop to 1000 L.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.csbio.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Automated Peptide Synthesizers | CSBio">
+    <meta property="og:description" content="Automated peptide synthesizers for research, pilot, clinical, and commercial-scale peptide synthesis.">
+    <meta property="og:url" content="https://www.csbio.com/">
+    <meta property="og:image" content="https://www.csbio.com/assets/img/synthesizerpictures/peptides.jpg">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+
     <!-- CSS Global Icons -->
     <link rel="stylesheet" href="assets/vendor/icon-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/vendor/icon-line/css/simple-line-icons.css">
@@ -35,7 +48,6 @@
     <link rel="stylesheet" href="assets/vendor/icon-hs/style.css">
     <link rel="stylesheet" href="assets/vendor/animate.css">
     <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="assets/vendor/typedjs/typed.css">
     <link rel="stylesheet" href="assets/vendor/hs-megamenu/src/hs.megamenu.css">
     <link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css">
 
@@ -48,38 +60,133 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <script src="assets/vendor/lazysizes.min.js"></script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "CSBio",
-  "url": "https://www.csbio.com",
-  "logo": "https://www.csbio.com/assets/img/favicon.png",
-  "description": "A leading peptide synthesis instrumentation company and cGMP peptide manufacturer based in Silicon Valley, California.",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-650-525-6200",
-    "contactType": "customer service",
-    "email": "instrument@csbio.com"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "915 Linda Vista Ave",
-    "addressLocality": "Mountain View",
-    "addressRegion": "CA",
-    "postalCode": "94043",
-    "addressCountry": "US"
-  }
-}
-</script>
-  
+    <style>
+      .csbio-card-img {
+        height: 220px;
+        object-fit: contain;
+        background: #f7f7f7;
+      }
+      .csbio-resource-card {
+        min-height: 250px;
+      }
+      .csbio-scale-card {
+        min-height: 100%;
+      }
+      .csbio-hero-subtitle {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .csbio-stat-number {
+        font-size: 2rem;
+        line-height: 1.1;
+      }
+      .csbio-table th {
+        white-space: nowrap;
+      }
+      @media (max-width: 767px) {
+        .csbio-card-img { height: 180px; }
+        .csbio-stat-number { font-size: 1.5rem; }
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.csbio.com/#organization",
+          "name": "CSBio",
+          "url": "https://www.csbio.com/",
+          "logo": "https://www.csbio.com/assets/img/favicon.png",
+          "description": "CSBio designs and manufactures automated peptide synthesizers and oligonucleotide synthesis equipment from research scale through commercial scale.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-650-525-6200",
+            "contactType": "sales",
+            "email": "instrument@csbio.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "915 Linda Vista Ave",
+            "addressLocality": "Mountain View",
+            "addressRegion": "CA",
+            "postalCode": "94043",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.csbio.com/#website",
+          "url": "https://www.csbio.com/",
+          "name": "CSBio",
+          "publisher": { "@id": "https://www.csbio.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.csbio.com/#webpage",
+          "url": "https://www.csbio.com/",
+          "name": "Automated Peptide Synthesizers | Research to Commercial Scale | CSBio",
+          "isPartOf": { "@id": "https://www.csbio.com/#website" },
+          "about": { "@id": "https://www.csbio.com/#organization" },
+          "description": "CSBio automated peptide synthesizers support research, pilot, clinical, and commercial-scale peptide synthesis."
+        },
+        {
+          "@type": "ItemList",
+          "name": "CSBio automated peptide synthesizer product family",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "CSBio II", "url": "https://www.csbio.com/csbioii.html" },
+            { "@type": "ListItem", "position": 2, "name": "CS136X", "url": "https://www.csbio.com/136x.html" },
+            { "@type": "ListItem", "position": 3, "name": "CS136M", "url": "https://www.csbio.com/136M.html" },
+            { "@type": "ListItem", "position": 4, "name": "CS536X", "url": "https://www.csbio.com/536x.html" },
+            { "@type": "ListItem", "position": 5, "name": "CS936S", "url": "https://www.csbio.com/936s.html" },
+            { "@type": "ListItem", "position": 6, "name": "Commercial Scale Peptide Synthesizers", "url": "https://www.csbio.com/commercialscale.html" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an automated peptide synthesizer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An automated peptide synthesizer performs the repeated deprotection, washing, coupling, and washing cycles used in solid phase peptide synthesis with instrument-controlled fluid handling, mixing, timing, and software control."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which CSBio peptide synthesizer is best for research scale work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For research scale peptide synthesis, CSBio offers the CSBio II for benchtop automation, the CS136X for flexible R&D and process development, and the CS136M for higher-throughput parallel synthesis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does CSBio offer pilot and commercial scale peptide synthesizers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. CSBio offers pilot scale systems including the CS536X and CS936S, as well as custom commercial scale peptide synthesizers with reaction vessels from 10 L to 1000 L."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can CSBio systems support GMP peptide manufacturing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CSBio pilot and commercial scale peptide synthesizers can be configured for GMP-ready operation, including 21 CFR Part 11 compliant peptide synthesis software and custom facility integration."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
-  
   <body>
     <main>
-  
-  
-  
       <!-- Header -->
       <header id="js-header" class="u-header u-header--static">
         <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10">
@@ -207,7 +314,7 @@
 
                                                            <!-- Info -->
                      <li class="nav-item g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
-                      <a href="quotesynthesizer.html" id="nav-link--features" class="nav-link g-py-7 g-px-0"  aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features"><Strong><font color="#2f3192">Request Synthesis Equipment</Strong></font></a>
+                      <a href="quotesynthesizer.html" id="nav-link--features" class="nav-link g-py-7 g-px-0"  aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features"><strong><font color="#2f3192">Request Synthesis Equipment</font></strong></a>
                     </li>
                     <!-- End Info -->
 
@@ -220,454 +327,622 @@
         </div>
       </header>
       <!-- End Header -->
+
     <!-- Promo Block -->
-    <section class="g-bg-cover g-bg-pos-top-center g-bg-img-hero g-bg-black-opacity-0_3--after g-min-height-100vh g-flex-centered g-py-100" style="background-image: url(assets/img/synthesizerpictures/peptides.jpg);">
+    <section class="g-bg-cover g-bg-pos-top-center g-bg-img-hero g-bg-black-opacity-0_5--after g-min-height-100vh g-flex-centered g-py-100" style="background-image: url(assets/img/synthesizerpictures/peptides.jpg);">
       <div class="container g-color-white text-center g-z-index-1">
         <div class="mb-5">
-          <h2 class="g-font-weight-700 g-font-size-40 g-font-size-70--md g-mb-30">
-              best in class
-              <span class="u-text-animation u-text-animation--typing"></span>
-            </h2>
-          <p class="g-font-size-24">people who know peptides</p>
+          <h1 class="g-font-weight-700 g-font-size-42 g-font-size-70--md g-mb-25">Fully Automated Peptide Synthesizers</h1>
+          <p class="g-font-size-24 csbio-hero-subtitle">Research, pilot, clinical, and commercial-scale peptide synthesis equipment from CSBio.</p>
+          <p class="g-font-size-18 g-color-white-opacity-0_9 csbio-hero-subtitle">Since 1993, CSBio has designed and manufactured peptide synthesizers for universities, biotech companies, CDMOs, and pharmaceutical manufacturers worldwide.</p>
+        </div>
+        <div>
+          <a class="btn btn-xl u-btn-primary g-font-weight-600 g-rounded-50 g-px-35 g-py-13 g-mr-10 g-mb-15" href="quotesynthesizer.html">Request Synthesis Equipment</a>
+          <a class="btn btn-xl u-btn-outline-white g-font-weight-600 g-rounded-50 g-px-35 g-py-13 g-mb-15" href="#systems">Compare Systems</a>
         </div>
       </div>
     </section>
     <!-- End Promo Block -->
 
-    <!-- About Us -->
-    <section id="about" class="g-py-100">
+    <!-- Quick Intro -->
+    <section id="automated-peptide-synthesizers" class="g-py-80">
       <div class="container">
         <header class="text-center g-width-80x--md mx-auto g-mb-60">
-
-          <p class="lead"><strong>CSBio</strong> is a leading peptide synthesis instrumentation company located in <br>Silicon Valley, California.<br> <br> Since 1993, CSBio has been providing automated peptide synthesizers to the global pharmaceutical community. Our peptide synthesizers can be found in more than 30 countries worldwide across universities, research institutes, production laboratories, CDMOs, biotech companies, and multi-national pharmaceutical companies.</p>
+          <h2 class="h1 g-color-black g-font-weight-600 g-mb-25">Peptide synthesizers from discovery to commercial manufacturing</h2>
+          <p class="lead">CSBio designs and manufactures automated peptide synthesizers for solid phase peptide synthesis (SPPS), supporting labs as they move from first research batches to process development, GMP-ready clinical production, and custom commercial-scale manufacturing.</p>
         </header>
 
-        <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <img class="img-fluid" src="assets/img/synthesizerpictures/instrumentationmfg.jpg" alt="Image description">
+        <div class="row text-center g-mb-40">
+          <div class="col-md-3 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <div class="csbio-stat-number g-color-primary g-font-weight-700">30+</div>
+              <div class="g-color-black g-font-weight-600">Years</div>
+              <p class="g-color-gray-dark-v4 g-font-size-13 mb-0">Designing and manufacturing automated peptide synthesis instruments.</p>
+            </div>
           </div>
+          <div class="col-md-3 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <div class="csbio-stat-number g-color-primary g-font-weight-700">30+</div>
+              <div class="g-color-black g-font-weight-600">Countries</div>
+              <p class="g-color-gray-dark-v4 g-font-size-13 mb-0">Systems installed across academic, biotech, pharma, and CDMO labs.</p>
+            </div>
+          </div>
+          <div class="col-md-3 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <div class="csbio-stat-number g-color-primary g-font-weight-700">6 mL</div>
+              <div class="g-color-black g-font-weight-600">Research Scale</div>
+              <p class="g-color-gray-dark-v4 g-font-size-13 mb-0">Benchtop and R&D systems for automated peptide synthesis.</p>
+            </div>
+          </div>
+          <div class="col-md-3 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <div class="csbio-stat-number g-color-primary g-font-weight-700">1000 L</div>
+              <div class="g-color-black g-font-weight-600">Commercial Scale</div>
+              <p class="g-color-gray-dark-v4 g-font-size-13 mb-0">Custom automated systems for large-scale peptide manufacturing.</p>
+            </div>
+          </div>
+        </div>
 
-          <div class="col-lg-6 align-self-center g-pl-30--lg g-mb-50 g-mb-0--lg">
-            <p class="g-mb-30">Our <strong>instrumentation design and manufacturing</strong> team provides the best in class products and services in the industry. </p>
+        <div class="row">
+          <div class="col-lg-6 align-self-center g-mb-40 g-mb-0--lg">
+            <img class="img-fluid g-rounded-5" src="assets/img/synthesizerpictures/instrumentationmfg.jpg" alt="CSBio automated peptide synthesizer manufacturing in Mountain View California">
+          </div>
+          <div class="col-lg-6 align-self-center g-pl-30--lg">
+            <h3 class="h2 g-color-black g-font-weight-600 g-mb-25">Designed and Built in California</h3>
+            <p class="lead">Designed by people who know peptides, CSBio combines peptide chemistry experience with instrumentation design, software, fluid handling, and manufacturing expertise. Our systems are built to support practical peptide synthesis workflows, not just generic liquid handling.</p>
+            <ul class="list-unstyled g-color-gray-dark-v4 g-mb-30">
+              <li class="d-flex g-mb-10"><i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Research scale peptide synthesizers for R&D, discovery, and small-scale manufacturing</li>
+              <li class="d-flex g-mb-10"><i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Pilot scale peptide synthesizers for process development, scale-up, and clinical production</li>
+              <li class="d-flex g-mb-10"><i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Commercial scale peptide synthesizers custom-built for GMP manufacturing facilities</li>
+              <li class="d-flex g-mb-10"><i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Configurable options for temperature control, PAT integration, solvent reduction, flowthrough technology, continuous monitoring, software, and facility integration</li>
+            </ul>
+            <a class="btn u-btn-primary g-rounded-50 g-px-30 g-py-12" href="offices.html">Learn About CSBio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Quick Intro -->
 
+    <!-- System Finder -->
+    <section id="systems" class="g-bg-secondary g-py-90">
+      <div class="container">
+        <header class="text-center g-width-80x--md mx-auto g-mb-60">
+          <h2 class="h1 g-color-black g-font-weight-600 g-mb-25">Find the right CSBio peptide synthesizer</h2>
+          <p class="lead">Start with synthesis scale, throughput, and where the work fits in your peptide lifecycle. Each CSBio system links to a detailed page with specifications and configuration options.</p>
+        </header>
+
+        <div class="table-responsive g-mb-60">
+          <table class="table table-bordered table-striped csbio-table g-bg-white">
+            <thead>
+              <tr>
+                <th>Need</th>
+                <th>Recommended systems</th>
+                <th>Typical use</th>
+                <th>Learn more</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Benchtop research automation</strong></td>
+                <td>CSBio II</td>
+                <td>Automating routine research-scale peptide synthesis in a compact lab footprint.</td>
+                <td><a href="csbioii.html">CSBio II</a></td>
+              </tr>
+              <tr>
+                <td><strong>Flexible R&D and process development</strong></td>
+                <td>CS136X</td>
+                <td>20 mL to 200 mL reaction vessels, flexible chemistry, and up to 3 reaction vessels.</td>
+                <td><a href="136x.html">CS136X</a></td>
+              </tr>
+              <tr>
+                <td><strong>Parallel research synthesis</strong></td>
+                <td>CS136M</td>
+                <td>Six reaction vessels for high-throughput small-scale peptide synthesis.</td>
+                <td><a href="136M.html">CS136M</a></td>
+              </tr>
+              <tr>
+                <td><strong>Process development and scale-up</strong></td>
+                <td>CS536X</td>
+                <td>Pilot-scale single-batch peptide synthesis with configurable process-development options.</td>
+                <td><a href="536x.html">CS536X</a></td>
+              </tr>
+              <tr>
+                <td><strong>Clinical-stage and GMP-ready pilot production</strong></td>
+                <td>CS936S</td>
+                <td>2 L to 10 L platform for robust pilot scale peptide synthesis and clinical production.</td>
+                <td><a href="936s.html">CS936S</a></td>
+              </tr>
+              <tr>
+                <td><strong>Commercial peptide manufacturing</strong></td>
+                <td>Custom commercial systems</td>
+                <td>10 L to 1000 L fully automated peptide synthesizers tailored to your workflow and facility.</td>
+                <td><a href="commercialscale.html">Commercial scale</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-pos-rel g-rounded-5 csbio-scale-card">
+              <img class="img-fluid w-100 g-rounded-top-5 csbio-card-img" src="assets/img/csbioii/csbioii_peptide_synthesizer_cspepm.png" alt="CSBio II benchtop automated peptide synthesizer">
+              <div class="g-pa-30">
+                <h3 class="h5 g-color-black g-font-weight-600 g-mb-10">CSBio II</h3>
+                <p class="g-color-gray-dark-v4">A compact, fully automated peptide synthesizer for labs that want to bring research-scale peptide synthesis in-house.</p>
+                <a class="g-font-weight-600" href="csbioii.html">View CSBio II <i class="fa fa-angle-right g-ml-5"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-pos-rel g-rounded-5 csbio-scale-card">
+              <img class="img-fluid w-100 g-rounded-top-5 csbio-card-img" src="assets/img/synthesizerpictures/CSBio_136X_Peptide_Synthesizer.png" alt="CS136X automated research scale peptide synthesizer">
+              <div class="g-pa-30">
+                <h3 class="h5 g-color-black g-font-weight-600 g-mb-10">CS136X</h3>
+                <p class="g-color-gray-dark-v4">A flexible research-scale platform for R&D, process development, and small-scale manufacturing.</p>
+                <a class="g-font-weight-600" href="136x.html">View CS136X <i class="fa fa-angle-right g-ml-5"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-pos-rel g-rounded-5 csbio-scale-card">
+              <img class="img-fluid w-100 g-rounded-top-5 csbio-card-img" src="assets/img/synthesizerpictures/136m-side.png" alt="CS136M high throughput automated peptide synthesizer">
+              <div class="g-pa-30">
+                <h3 class="h5 g-color-black g-font-weight-600 g-mb-10">CS136M</h3>
+                <p class="g-color-gray-dark-v4">A six-reaction-vessel parallel peptide synthesizer for higher throughput research and small-scale production.</p>
+                <a class="g-font-weight-600" href="136M.html">View CS136M <i class="fa fa-angle-right g-ml-5"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-pos-rel g-rounded-5 csbio-scale-card">
+              <img class="img-fluid w-100 g-rounded-top-5 csbio-card-img" src="assets/img/synthesizerpictures/536tran.png" alt="CS536X pilot scale automated peptide synthesizer">
+              <div class="g-pa-30">
+                <h3 class="h5 g-color-black g-font-weight-600 g-mb-10">CS536X</h3>
+                <p class="g-color-gray-dark-v4">A pilot-scale automated peptide synthesizer for process development, scale-up, and medium-scale production needs.</p>
+                <a class="g-font-weight-600" href="536x.html">View CS536X <i class="fa fa-angle-right g-ml-5"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-pos-rel g-rounded-5 csbio-scale-card">
+              <img class="img-fluid w-100 g-rounded-top-5 csbio-card-img" src="assets/img/synthesizerpictures/936s.png" alt="CS936S GMP-ready pilot scale peptide synthesizer">
+              <div class="g-pa-30">
+                <h3 class="h5 g-color-black g-font-weight-600 g-mb-10">CS936S</h3>
+                <p class="g-color-gray-dark-v4">A 2 L to 10 L platform for process development and GMP-ready clinical-stage peptide production.</p>
+                <a class="g-font-weight-600" href="936s.html">View CS936S <i class="fa fa-angle-right g-ml-5"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-pos-rel g-rounded-5 csbio-scale-card">
+              <img class="img-fluid w-100 g-rounded-top-5 csbio-card-img" src="assets/img/synthesizerpictures/7.png" alt="CSBio custom commercial scale automated peptide synthesizer">
+              <div class="g-pa-30">
+                <h3 class="h5 g-color-black g-font-weight-600 g-mb-10">Commercial Scale</h3>
+                <p class="g-color-gray-dark-v4">Custom fully automated commercial-scale peptide synthesizers for GMP manufacturing from 10 L to 1000 L.</p>
+                <a class="g-font-weight-600" href="commercialscale.html">View commercial systems <i class="fa fa-angle-right g-ml-5"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End System Finder -->
+
+    <!-- How to Choose -->
+    <section id="how-to-choose" class="g-py-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 g-mb-40 g-mb-0--lg">
+            <h2 class="h1 g-color-black g-font-weight-600 g-mb-25">How to choose a peptide synthesizer</h2>
+            <p class="lead">A good peptide synthesizer decision starts with the work you need the system to perform: discovery, method development, scale-up, clinical production, or commercial manufacturing.</p>
+            <a class="btn u-btn-primary g-rounded-50 g-px-30 g-py-12" href="blog/peptide-synthesizer-comparison.html">Read the comparison guide</a>
+          </div>
+          <div class="col-lg-7">
             <div class="row">
-                            <div class="col-sm-6">
-                <ul class="list-unstyled g-color-gray-dark-v4">
-                  <li class="d-flex g-mb-10">
-                    <i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Research Scale Peptide Synthesizers
-                  </li>
-                  <li class="d-flex g-mb-10">
-                    <i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Pilot Scale Peptide Synthesizers
-                  </li>
-                  <li class="d-flex g-mb-10">
-                    <i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Commerical Scale Peptide Synthesizers
-                </ul>
+              <div class="col-md-6 g-mb-25">
+                <div class="d-flex">
+                  <div class="g-mr-20"><span class="u-icon-v3 u-icon-size--sm g-bg-primary g-color-white g-rounded-50x"><i class="icon-layers"></i></span></div>
+                  <div>
+                    <h3 class="h6 g-color-black g-font-weight-600">Scale and batch size</h3>
+                    <p class="g-color-gray-dark-v4 mb-0">Match vessel size, resin loading, and output needs to research, pilot, or commercial production.</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm-6">
-                <ul class="list-unstyled g-color-gray-dark-v4 g-mb-30 g-mb-0--sm">
-                  <li class="d-flex g-mb-10">
-                    <i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Pilot and Process Scale DNA Synthesizers
-                  </li>
-                  <li class="d-flex g-mb-10">
-                    <i class="icon-arrow-right-circle g-color-primary g-mt-5 g-mr-10"></i> Custom Build to Order Synthesizers
-                  </li>
-                  </li>
-                </ul>
+              <div class="col-md-6 g-mb-25">
+                <div class="d-flex">
+                  <div class="g-mr-20"><span class="u-icon-v3 u-icon-size--sm g-bg-primary g-color-white g-rounded-50x"><i class="icon-shuffle"></i></span></div>
+                  <div>
+                    <h3 class="h6 g-color-black g-font-weight-600">Throughput</h3>
+                    <p class="g-color-gray-dark-v4 mb-0">Decide whether you need one robust synthesis path or parallel reaction vessels for multiple peptides.</p>
+                  </div>
+                </div>
               </div>
-
-
+              <div class="col-md-6 g-mb-25">
+                <div class="d-flex">
+                  <div class="g-mr-20"><span class="u-icon-v3 u-icon-size--sm g-bg-primary g-color-white g-rounded-50x"><i class="icon-energy"></i></span></div>
+                  <div>
+                    <h3 class="h6 g-color-black g-font-weight-600">Heating</h3>
+                    <p class="g-color-gray-dark-v4 mb-0">Consider temperature control and preheated solvent delivery for synthesis speed and peptide crude purity</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 g-mb-25">
+                <div class="d-flex">
+                  <div class="g-mr-20"><span class="u-icon-v3 u-icon-size--sm g-bg-primary g-color-white g-rounded-50x"><i class="icon-settings"></i></span></div>
+                  <div>
+                    <h3 class="h6 g-color-black g-font-weight-600">Process flexibility</h3>
+                    <p class="g-color-gray-dark-v4 mb-0">Confirm support for your coupling chemistry, custom protocols, selective capping, and method development needs.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 g-mb-25">
+                <div class="d-flex">
+                  <div class="g-mr-20"><span class="u-icon-v3 u-icon-size--sm g-bg-primary g-color-white g-rounded-50x"><i class="icon-graph"></i></span></div>
+                  <div>
+                    <h3 class="h6 g-color-black g-font-weight-600">PAT and Process Development</h3>
+                    <p class="g-color-gray-dark-v4 mb-0">For scale-up or process development, consider UV, refractive index, temperature control, and PAT feedback automation.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 g-mb-25">
+                <div class="d-flex">
+                  <div class="g-mr-20"><span class="u-icon-v3 u-icon-size--sm g-bg-primary g-color-white g-rounded-50x"><i class="icon-lock"></i></span></div>
+                  <div>
+                    <h3 class="h6 g-color-black g-font-weight-600">GMP readiness</h3>
+                    <p class="g-color-gray-dark-v4 mb-0">For clinical or commercial work, plan around software, documentation, facility integration, and long-term support.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- End How to Choose -->
 
+    <!-- Technology -->
+    <section id="technology" class="g-bg-secondary g-py-90">
+      <div class="container">
+        <header class="text-center g-width-80x--md mx-auto g-mb-60">
+          <h2 class="h1 g-color-black g-font-weight-600 g-mb-25">Technology built for practical SPPS workflows</h2>
+          <p class="lead">CSBio platforms are configurable because peptide synthesis needs vary by sequence, chemistry, scale, throughput, and manufacturing environment.</p>
+        </header>
+        <div class="row">
+          <div class="col-md-4 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <h3 class="h5 g-color-black g-font-weight-600">Automated synthesis control</h3>
+              <p class="g-color-gray-dark-v4 mb-0">Build or select protocols, assign chemistries, and automate deprotection, washing, coupling, and repeat cycles.</p>
+            </div>
+          </div>
+          <div class="col-md-4 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <h3 class="h5 g-color-black g-font-weight-600">Temperature control</h3>
+              <p class="g-color-gray-dark-v4 mb-0">Options include heated reaction vessels, preheated solvent delivery, and temperature-controlled scale-up workflows.</p>
+            </div>
+          </div>
+          <div class="col-md-4 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <h3 class="h5 g-color-black g-font-weight-600">Mixing at scale</h3>
+              <p class="g-color-gray-dark-v4 mb-0">Research systems use inversion mixing and nitrogen bubbling, while larger systems use overhead stirring for consistent scale-up.</p>
+            </div>
+          </div>
+          <div class="col-md-4 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <h3 class="h5 g-color-black g-font-weight-600">PAT integration</h3>
+              <p class="g-color-gray-dark-v4 mb-0">Pilot and commercial systems can be configured for process analytical technologies including UV, RI, and Raman integration.</p>
+            </div>
+          </div>
+          <div class="col-md-4 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <h3 class="h5 g-color-black g-font-weight-600">Solvent reduction options</h3>
+              <p class="g-color-gray-dark-v4 mb-0">Options such as solvent recycling, flowthrough technology, and percolation washing can support waste reduction and lower raw material costs.</p>
+            </div>
+          </div>
+          <div class="col-md-4 g-mb-30">
+            <div class="u-shadow-v21 g-bg-white g-rounded-5 g-pa-30 h-100">
+              <h3 class="h5 g-color-black g-font-weight-600">Custom build-to-order systems</h3>
+              <p class="g-color-gray-dark-v4 mb-0">Large-scale systems can be tailored to facility layout, process needs, vessel size, solvent handling, automation, and documentation requirements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Technology -->
+
+    <!-- Resources -->
+    <section id="resources" class="g-py-90">
+      <div class="container">
+        <header class="text-center g-width-80x--md mx-auto g-mb-60">
+          <h2 class="h1 g-color-black g-font-weight-600 g-mb-25">Peptide synthesis resources</h2>
+          <p class="lead">For detailed technical information, use CSBio’s resource library. These links support visitors who are comparing systems, learning SPPS, or planning scale-up.</p>
+        </header>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-rounded-5 g-pa-30 csbio-resource-card">
+              <span class="d-block g-color-primary g-font-weight-600 g-mb-10">System Selection</span>
+              <h3 class="h5 g-color-black g-font-weight-600"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog/peptide-synthesizer-comparison.html">Research Scale Peptide Synthesizer Comparison</a></h3>
+              <p class="g-color-gray-dark-v4">A guide for users comparing popular automated peptide synthesizers and choosing a system that fits their needs.</p>
+              <a class="g-font-weight-600" href="blog/peptide-synthesizer-comparison.html">Read guide <i class="fa fa-angle-right g-ml-5"></i></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-rounded-5 g-pa-30 csbio-resource-card">
+              <span class="d-block g-color-primary g-font-weight-600 g-mb-10">SPPS Fundamentals</span>
+              <h3 class="h5 g-color-black g-font-weight-600"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog/practical-guide-spps.html">A Practical Guide to Solid Phase Peptide Synthesis</a></h3>
+              <p class="g-color-gray-dark-v4">A detailed SPPS introduction with practical guidance for avoiding common synthesis issues.</p>
+              <a class="g-font-weight-600" href="blog/practical-guide-spps.html">Read guide <i class="fa fa-angle-right g-ml-5"></i></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-rounded-5 g-pa-30 csbio-resource-card">
+              <span class="d-block g-color-primary g-font-weight-600 g-mb-10">Training</span>
+              <h3 class="h5 g-color-black g-font-weight-600"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog/spps-mini-course.html">A Mini-Course on Solid Phase Peptide Synthesis</a></h3>
+              <p class="g-color-gray-dark-v4">A video mini-course covering amino acids, peptide bonds, activation chemistry, resin types, and the synthesis cycle.</p>
+              <a class="g-font-weight-600" href="blog/spps-mini-course.html">Start course <i class="fa fa-angle-right g-ml-5"></i></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-rounded-5 g-pa-30 csbio-resource-card">
+              <span class="d-block g-color-primary g-font-weight-600 g-mb-10">Heating</span>
+              <h3 class="h5 g-color-black g-font-weight-600"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog/conductionandmicrowave.html">Microwave vs. Conduction Heating for SPPS</a></h3>
+              <p class="g-color-gray-dark-v4">A comparison of microwave and conduction heating approaches for solid phase peptide synthesis.</p>
+              <a class="g-font-weight-600" href="blog/conductionandmicrowave.html">Read comparison <i class="fa fa-angle-right g-ml-5"></i></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-rounded-5 g-pa-30 csbio-resource-card">
+              <span class="d-block g-color-primary g-font-weight-600 g-mb-10">Process Development</span>
+              <h3 class="h5 g-color-black g-font-weight-600"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog/pat-spps.html">Process Analytical Technologies in SPPS</a></h3>
+              <p class="g-color-gray-dark-v4">An introduction to UV, refractive index, and Raman tools for monitoring peptide synthesis processes.</p>
+              <a class="g-font-weight-600" href="blog/pat-spps.html">Read resource <i class="fa fa-angle-right g-ml-5"></i></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 g-mb-30">
+            <article class="u-shadow-v21 u-shadow-v21--hover g-bg-white g-rounded-5 g-pa-30 csbio-resource-card">
+              <span class="d-block g-color-primary g-font-weight-600 g-mb-10">Heating</span>
+              <h3 class="h5 g-color-black g-font-weight-600"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog/conductionpreheating.html"> Preheating in Conduction-Heated Peptide Synthesis</a></h3>
+              <p class="g-color-gray-dark-v4">A case study on how conduction preheating can improve synthesis speed and crude peptide purity.</p>
+              <a class="g-font-weight-600" href="blog/conductionpreheating.html">Read case study <i class="fa fa-angle-right g-ml-5"></i></a>
+            </article>
+          </div>
+        </div>
+        <div class="text-center g-mt-20">
+          <a class="btn u-btn-outline-primary g-rounded-50 g-px-30 g-py-12" href="blog.html">View all resources</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Resources -->
 
     <!-- Clients -->
-    <section>
-      <div class="js-carousel g-brd-top g-brd-bottom g-brd-gray-light-v4" data-autoplay="true" data-slides-show="6" data-responsive='[{
-               "breakpoint": 768,
-               "settings": {
-                 "slidesToShow": 2
-               }
-             }]'>
-        
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/novartis.jpg" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/abbott.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/cdc.jpg" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/chugai.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/stanford.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/amgen.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/roche.png" alt="Image description">
-        </div>
-
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/gsk.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/peking.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/eth.jpg" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/natco.png" alt="Image description">
-        </div>
-
-         <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/ipsen.jpg" alt="Image description">
-        </div>
-
-
-          <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/hybio.jpg" alt="Image description">
-        </div>
-
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/scripps.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/fresenius.jpg" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/technion.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/ubc.png" alt="Image description">
-        </div>
-
-
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/usv.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/wuxi.jpg" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/queensland.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/finland.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/pfizer.jpg" alt="Image description">
-        </div>
-
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/pg.jpg" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/osaka.png" alt="Image description">
-        </div>
-
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/sanofi.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/munster.png" alt="Image description">
-        </div>
-
-        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50">
-          <img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/harvard.jpg" alt="Image description">
-        </div>
-
-
+    <section aria-label="Selected CSBio customers and institutions">
+      <div class="js-carousel g-brd-top g-brd-bottom g-brd-gray-light-v4" data-autoplay="true" data-slides-show="6" data-responsive='[{"breakpoint": 768, "settings": {"slidesToShow": 2}}]'>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/novartis.jpg" alt="Novartis logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/abbott.png" alt="Abbott logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/cdc.jpg" alt="CDC logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/chugai.png" alt="Chugai logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/stanford.png" alt="Stanford University logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/amgen.png" alt="Amgen logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/roche.png" alt="Roche logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/gsk.png" alt="GSK logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/scripps.png" alt="Scripps Research logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/pfizer.jpg" alt="Pfizer logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/sanofi.png" alt="Sanofi logo"></div>
+        <div class="js-slide u-block-hover g-brd-left g-brd-gray-light-v4 g-py-50"><img class="mx-auto g-width-120 u-block-hover__main--grayscale g-opacity-0_3 g-opacity-1--hover g-cursor-pointer" src="assets/img/logos/harvard.jpg" alt="Harvard University logo"></div>
       </div>
     </section>
     <!-- End Clients -->
 
-            <!-- Mockup -->
-    <section class="g-bg-secondary">
-      <div class="container g-pt-100 g-pb-70">
-        <div class="row">
-          <div class="col-lg-5 g-mb-30">
-            <div class="mb-2">
-            </div>
 
-            <div class="mb-5">
-              <h2 class="h1 g-color-black g-font-weight-600 g-mb-35"><span class="g-color-primary">30+ Years</span> | 30+ Countries</h2>
-              <p class="lead">CSBio has been designing and manufacturing fully automated peptide synthesis instruments for over 30 years, and has systems installed and utilized in more than 30 countries worldwide. Starting with the first automated peptide synthesizer on MS-DOS, CSBio has honed the systems to the flexible, reliable, and cost effective equipment they are today.</p>
-              <p class="lead">CSBio builds peptide synthesizers from research scale to commercial scale manufacturing, with many of our systems being custom built to order. CSBio has produced more automated pilot scale and commercial scale peptide synthesizers than any manufacturer in the world. </p>
-            </div>
+    <!-- FAQ -->
+    <section id="faq" class="g-py-90">
+      <div class="container">
+        <header class="text-center g-width-80x--md mx-auto g-mb-60">
+          <h2 class="h1 g-color-black g-font-weight-600 g-mb-25">Automated Peptide Synthesizer FAQ</h2>
+          <p class="lead">Common questions for new users comparing peptide synthesis equipment.</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6 g-mb-30">
+            <h3 class="h5 g-color-black g-font-weight-600">What is an automated peptide synthesizer?</h3>
+            <p class="g-color-gray-dark-v4">
+              A fully automated peptide synthesizer automates the repeated synthesis cycle for each amino acid, including deprotection, washing, coupling, and washing steps. For research-scale systems, this typically means the instrument can complete an entire peptide sequence without user intervention once the method is started.
+            </p>
+            <p class="g-color-gray-dark-v4">
+              For larger pilot and commercial-scale systems, the level of automation can depend on system size and process requirements. A 1000 L commercial-scale system may automate the full synthesis cycle for each amino acid, while still requiring operator intervention between couplings for material handling, charging, sampling, or process checks. Mid-scale systems generally fall somewhere between these two approaches.
+            </p>
+            <p class="g-color-gray-dark-v4 mb-0">
+              When comparing peptide synthesizers, it is important to confirm what is actually automated. Some systems or accessories may automate only part of the process, such as heating or the coupling step, while a fully automated peptide synthesizer is designed to control the full SPPS cycle.
+            </p>
           </div>
 
-          <div class="col-lg-7 g-mb-30">
-            <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/791298009?h=872073d53b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="CSBI Overview.mov"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          <div class="col-lg-6 g-mb-30">
+            <h3 class="h5 g-color-black g-font-weight-600">Which CSBio system is best for research scale work?</h3>
+            <p class="g-color-gray-dark-v4">
+              For research-scale peptide synthesis, the right CSBio system depends on how much flexibility, throughput, and process control the user needs. The CSBio II is the most compact, plug-and-play option. It is designed for users who want to make peptides at smaller scales with minimal setup, using preloaded protocols and straightforward operation.
+            </p>
+            <p class="g-color-gray-dark-v4">
+              The CS136X is a more flexible research and process development platform. It is better suited for users who want to adjust chemistry, develop methods, optimize protocols, support scale-up work, or begin moving toward small-batch GMP manufacturing.
+            </p>
+            <p class="g-color-gray-dark-v4 mb-0">
+              The CS136M is designed for higher-throughput peptide production, such as groups making 50 or more different peptides per month around the 0.2 mmol scale. It is not typically the best fit for users focused on process development, scale-up, or frequent changes to chemistries and protocols across different peptides.
+            </p>
+          </div>
+
+          <div class="col-lg-6 g-mb-30">
+            <h3 class="h5 g-color-black g-font-weight-600">What is the difference between research, pilot, and commercial scale?</h3>
+            <p class="g-color-gray-dark-v4">
+              The difference between research, pilot, and commercial scale is largely based on the intended use case and the quantity of peptide being produced per batch. Research-scale systems are typically used for discovery, small-scale manufacturing, and early process development.
+            </p>
+            <p class="g-color-gray-dark-v4">
+              Pilot-scale systems are generally used for later-stage process development, scale-up, and clinical production. Commercial-scale systems are designed for clinical-stage production through full commercial manufacturing, with the level of automation, documentation, and facility integration matched to the production environment. Process development needs also depend on the final manufacturing scale.
+            </p>
+            <p class="g-color-gray-dark-v4 mb-0">
+               CSBio designs each system around its intended application: the CSBio II is a research-scale, plug-and-play system with preloaded protocols, while custom commercial-scale systems are engineered with more extensive documentation, facility integration, and process integration requirements.
+            </p>
+          </div>
+
+          <div class="col-lg-6 g-mb-30">
+            <h3 class="h5 g-color-black g-font-weight-600">Can CSBio systems support GMP manufacturing?</h3>
+            <p class="g-color-gray-dark-v4">
+              Yes. CSBio systems can be configured to support GMP manufacturing requirements, with the exception of the CSBio II, which is designed as a compact research-scale, plug-and-play peptide synthesizer.
+            </p>
+            <p class="g-color-gray-dark-v4">
+              For GMP applications, CSBio can provide options for documentation, software, automation, controls, materials of construction, and system configuration depending on the intended use case. Pilot and larger-scale systems can support process development, scale-up, clinical production, and commercial manufacturing.
+            </p>
+            <p class="g-color-gray-dark-v4 mb-0">
+              Commercial-scale systems typically include more options for facility integration and process integration. CSBio offers standard options across its system platforms, custom options on standard systems, and fully custom build-to-order peptide synthesizers for applications that require a facility-specific design.
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Mockup -->
+    <!-- End FAQ -->
+```
 
 
+    <!-- CTA -->
+    <section class="g-bg-primary g-color-white g-py-70">
+      <div class="container text-center">
+        <h2 class="h1 g-font-weight-600 g-mb-20">Ready to discuss a peptide synthesizer?</h2>
+        <p class="lead g-color-white-opacity-0_9 g-width-70x--md mx-auto g-mb-35">Tell us your synthesis scale, throughput needs, chemistry, software requirements, and production goals. CSBio can help identify the right automated peptide synthesis platform.</p>
+        <a class="btn btn-xl u-btn-white g-color-primary g-font-weight-600 g-rounded-50 g-px-35 g-py-13 g-mr-10 g-mb-15" href="quotesynthesizer.html">Request Synthesis Equipment</a>
+        <a class="btn btn-xl u-btn-outline-white g-font-weight-600 g-rounded-50 g-px-35 g-py-13 g-mb-15" href="https://calendly.com/instrument/peptide-synthesizers">Schedule a Call</a>
+      </div>
+    </section>
+    <!-- End CTA -->
 
       <!-- Footer -->
       <div id="contacts-section" class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
         <div class="container">
           <div class="row">
-            <!-- Footer Content -->
             <div class="col-md-3 g-mb-40 g-mb-0--lg">
               <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                 <h2 class="u-heading-v2__title h6 text-uppercase mb-0">About Us</h2>
               </div>
-  
-              <p>CSBio is a leading peptide instrumentation manufacturing company located in Silicon Valley, California. <br> <br>CSBio provides research scale peptide synthesizers, pilot scale peptide synthesizers, commerical scale peptide synthesizers, and DNA/RNA oligonucleotide synthesizers.</p>
+              <p>CSBio is a leading peptide instrumentation manufacturing company located in Silicon Valley, California.<br><br>CSBio provides research scale peptide synthesizers, pilot scale peptide synthesizers, commercial scale peptide synthesizers, and DNA/RNA oligonucleotide synthesizers.</p>
             </div>
-            <!-- End Footer Content -->
-  
-            <!-- Footer Content -->
-  
-  
-            <!-- Footer Content -->
+
             <div class="col-md-3 g-mb-40 g-mb-0--lg">
               <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                 <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Links</h2>
               </div>
-  
-              <nav class="text-uppercase1">
+              <nav>
                 <ul class="list-unstyled g-mt-minus-10 mb-0">
-                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="index.html">Home</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
-                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="researchscale.html">Research Scale Synthesizers</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
-                                    <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="pilotscale.html">Pilot Scale Synthesizers</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
-                                    <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="commercialscale.html">Commercial Scale Synthesizers</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
-                                    <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="dna.html">DNA Scale Synthesizers</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
-                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="blog.html">Resources</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
-                  <li class="g-pos-rel g-py-10">
-                    <h4 class="h6 g-pr-20 mb-0">
-                  <a class="g-color-white-opacity-0_8 g-color-white--hover" href="offices.html">About</a>
-                  <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                </h4>
-                  </li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="index.html">Home</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="researchscale.html">Research Scale Synthesizers</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="pilotscale.html">Pilot Scale Synthesizers</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="commercialscale.html">Commercial Scale Synthesizers</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="dna.html">DNA Synthesizers</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="blog.html">Resources</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="offices.html">About</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
                 </ul>
               </nav>
             </div>
-            <!-- End Footer Content -->
-  
-            <!-- Footer Content -->
 
-                                    <div class="col-md-3">
+            <div class="col-md-3 g-mb-40 g-mb-0--lg">
               <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
-                <h2 class="u-heading-v2__title h6 text-uppercase mb-0"> Contact</h2>
+                <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Systems</h2>
               </div>
-  
-              <address class="g-bg-no-repeat g-font-size-12 mb-0" style="background-image: url();">
-            <!-- Location -->
-            <div class="d-flex g-mb-20">
-              <div class="g-mr-10">
-                <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
-                  <i class="fa fa-map-marker"></i>
-                </span>
-              </div>
-              <p class="mb-0">915 Linda Vista Ave<br>Mountain View, CA, 94043</p>
-            </div>
-            <!-- End Location -->
-  
-            <!-- Phone -->
-            <div class="d-flex g-mb-20">
-              <div class="g-mr-10">
-                <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
-                  <i class="fa fa-phone"></i>
-                </span>
-              </div>
-              <p class="mb-0"> <br> +1-650-525-6200<br> </p>
-            </div>
-            <!-- End Phone -->
-  
-            <!-- Email and Website -->
-            <div class="d-flex g-mb-20">
-              <div class="g-mr-10">
-                <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
-                  <i class="fa fa-globe"></i>
-                </span>
-              </div>
-              <p class="mb-0">
-                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="mailto:instrument@csbio.com">instrument@csbio.com</a>
-              </p>
-            </div>
-            <!-- End Email and Website -->
-          </address>
+              <nav>
+                <ul class="list-unstyled g-mt-minus-10 mb-0">
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="csbioii.html">CSBio II</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="136x.html">CS136X</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="136M.html">CS136M</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="536x.html">CS536X</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="936s.html">CS936S</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="commercialscale.html">CS936 and CS936X</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                  <li class="g-pos-rel g-py-10"><h4 class="h6 g-pr-20 mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="quotesynthesizer.html">Request Quote</a><i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i></h4></li>
+                </ul>
+              </nav>
             </div>
 
-
-            <!-- End Footer Content -->
+            <div class="col-md-3">
+              <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Contact</h2>
+              </div>
+              <address class="g-bg-no-repeat g-font-size-12 mb-0">
+                <div class="d-flex g-mb-20">
+                  <div class="g-mr-10"><span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6"><i class="fa fa-map-marker"></i></span></div>
+                  <p class="mb-0">915 Linda Vista Ave<br>Mountain View, CA, 94043</p>
+                </div>
+                <div class="d-flex g-mb-20">
+                  <div class="g-mr-10"><span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6"><i class="fa fa-phone"></i></span></div>
+                  <p class="mb-0">+1-650-525-6200</p>
+                </div>
+                <div class="d-flex g-mb-20">
+                  <div class="g-mr-10"><span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6"><i class="fa fa-globe"></i></span></div>
+                  <p class="mb-0"><a class="g-color-white-opacity-0_8 g-color-white--hover" href="mailto:instrument@csbio.com">instrument@csbio.com</a></p>
+                </div>
+              </address>
+            </div>
           </div>
         </div>
       </div>
       <!-- End Footer -->
-  
+
       <!-- Copyright Footer -->
       <footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
         <div class="container">
           <div class="row">
             <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
-              <div class="d-lg-flex">
-                <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2026 &copy; All Rights Reserved.</small>     
-              </div>
+              <div class="d-lg-flex"><small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2026 &copy; All Rights Reserved.</small></div>
             </div>
           </div>
         </div>
       </footer>
       <!-- End Copyright Footer -->
-      <a class="js-go-to u-go-to-v1" href="#!" data-type="fixed" data-position='{
-       "bottom": 15,
-       "right": 15
-     }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
-        <i class="hs-icon hs-icon-arrow-top"></i>
-      </a>
+
+      <a class="js-go-to u-go-to-v1" href="#!" data-type="fixed" data-position='{"bottom": 15, "right": 15}' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn"><i class="hs-icon hs-icon-arrow-top"></i></a>
     </main>
-  
+
     <div class="u-outer-spaces-helper"></div>
-  
-      <!-- Google Analytics -->
-      <script>
+
+    <!-- Google Analytics -->
+    <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-62852370-1', 'auto');
       ga('send', 'pageview');
-      </script>
-      <script async src='https://www.google-analytics.com/analytics.js'></script>
-      <!-- End Google Analytics -->
-  
-  
-  
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- End Google Analytics -->
+
     <!-- JS Global Compulsory -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="assets/vendor/popper.min.js"></script>
     <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="assets/vendor/lazysizes.min.js"></script>
-  
+
     <!-- JS Implementing Plugins -->
     <script src="assets/vendor/appear.js"></script>
     <script src="assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
     <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
-    <script src="assets/vendor/typedjs/typed.min.js"></script>
 
     <!-- JS Unify -->
     <script src="assets/js/hs.core.js"></script>
     <script src="assets/js/components/hs.carousel.js"></script>
     <script src="assets/js/components/hs.header.js"></script>
     <script src="assets/js/helpers/hs.hamburgers.js"></script>
-    <script src="assets/js/components/hs.tabs.js"></script>
-    <script src="assets/js/components/text-animation/hs.text-slideshow.js"></script>
     <script src="assets/js/components/hs.go-to.js"></script>
-  
+
     <!-- JS Customization -->
     <script src="assets/js/custom.js"></script>
-  
+
     <!-- JS Plugins Init. -->
     <script>
       $(document).on('ready', function () {
-          // initialization of carousel
-          $.HSCore.components.HSCarousel.init('.js-carousel');
-          // initialization of tabs
-          $.HSCore.components.HSTabs.init('[role="tablist"]');
-          // initialization of text animation (typing)
-          $(".u-text-animation.u-text-animation--typing").typed({
-            strings: [
-              "research scale peptide synthesizers",
-              "custom peptide synthesizers",
-              "commerical scale peptide synthesizers",
-              "oligo synthesizers"
-            ],
-            typeSpeed: 100,
-            loop: true,
-            backDelay: 1000
-          });
-          // initialization of go to
-          $.HSCore.components.HSGoTo.init('.js-go-to');
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+      });
+      $(window).on('load', function () {
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+        $('.js-mega-menu').HSMegaMenu({
+          event: 'hover',
+          pageContainer: $('.container'),
+          breakpoint: 991
         });
-        $(window).on('load', function () {
-          // initialization of header
-          $.HSCore.components.HSHeader.init($('#js-header'));
-          $.HSCore.helpers.HSHamburgers.init('.hamburger');
-          // initialization of HSMegaMenu component
-          $('.js-mega-menu').HSMegaMenu({
-            event: 'hover',
-            pageContainer: $('.container'),
-            breakpoint: 991
-          });
-        });
-        $(window).on('resize', function () {
-          setTimeout(function () {
-            $.HSCore.components.HSTabs.init('[role="tablist"]');
-          }, 200);
-        });
-
+      });
     </script>
-  
-  
-  
-  
-  
-  
-  
   </body>
-  
   </html>
