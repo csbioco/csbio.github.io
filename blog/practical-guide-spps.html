@@ -269,18 +269,8 @@
            </div>
 
 <div class="g-mb-60">
-  <p><b>Download the full 65 page guide here:</b> <span id="spps-download-link"></span></p>
+  <p><b>Download the full 65 page guide here:</b> <a id="spps-download-link" href="https://quy9s.share-na2.hsforms.com/2RQx5Oy86Rzu8GTHI-drjVg" data-toggle="modal" data-target="#spps-download-modal" aria-haspopup="dialog">Download Link</a></p>
 </div>
-
-<script
-  type="text/javascript"
-  defer
-  src="https://form.123formbuilder.com/embed/6930242.js?type=lightbox"
-  data-role="form"
-  data-default-width="800px"
-  data-embed-type="lightbox-text-link"
-  data-embed-text-link="Download Link">
-</script>
 
 
             <div class="g-mb-60">
@@ -504,6 +494,30 @@
     </a>
   </main>
 
+  <!-- Practical SPPS Guide request form -->
+  <div class="modal fade" id="spps-download-modal" tabindex="-1" role="dialog" aria-labelledby="spps-download-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="spps-download-title">Download the Practical SPPS Guide</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="spps-form-status" role="status">Loading request form...</p>
+          <template id="spps-download-form-template">
+            <div class="hs-form-frame" data-region="na2" data-form-id="450c793b-2f3a-473b-bc19-31c8f9dae356" data-portal-id="45114112"></div>
+          </template>
+          <p id="spps-form-fallback" hidden>
+            Having trouble loading the form? <a href="https://quy9s.share-na2.hsforms.com/2RQx5Oy86Rzu8GTHI-drjVg" target="_blank" rel="noopener">Open the request form in a new tab</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://js-na2.hsforms.net/forms/embed/45114112.js" defer></script>
+
   <div class="u-outer-spaces-helper"></div>
 
       <!-- Google Analytics -->
@@ -539,6 +553,31 @@
 
   <!-- JS Customization -->
   <script src="../assets/js/custom.js"></script>
+  <script>
+    (function () {
+      var status = document.getElementById('spps-form-status');
+      var fallback = document.getElementById('spps-form-fallback');
+
+      window.addEventListener('hs-form-event:on-ready', function (event) {
+        if (event.detail && event.detail.formId === '450c793b-2f3a-473b-bc19-31c8f9dae356') {
+          status.hidden = true;
+          fallback.hidden = true;
+        }
+      });
+
+      // Initialize at the visible popup width; preserve the form when reopening.
+      $('#spps-download-modal').one('shown.bs.modal', function () {
+        var template = document.getElementById('spps-download-form-template');
+        template.parentNode.insertBefore(template.content.cloneNode(true), fallback);
+        setTimeout(function () {
+          if (!status.hidden) {
+            status.textContent = 'The form is taking longer than expected to load.';
+            fallback.hidden = false;
+          }
+        }, 15000);
+      });
+    })();
+  </script>
 
   <!-- JS Plugins Init. -->
   <script>
