@@ -11,9 +11,9 @@ const categories = [
   { id: 'researchers', file: 'leading-peptide-researchers.html', title: 'Leading Peptide Researchers', description: 'Career advice: a series profiling leading peptide researchers, how they got into peptide science, and the lessons they share with the next generation.' }
 ];
 const collections = categories.concat({ id: 'top', file: 'top-posts.html', title: 'Top Posts', description: 'Explore our featured guides, comparisons, and case studies for peptide synthesis.' });
-const blockPattern = /<!-- Blog Minimal Blocks -->\s*<article class="g-mb-100" data-resource-category="([^"]+)"[^>]*>[\s\S]*?<\/article>\s*<!-- End Blog Minimal Blocks -->/g;
+const blockPattern = /<!-- Blog Minimal Blocks -->\s*<article\b[^>]*\bdata-resource-category="([^"]+)"[^>]*>[\s\S]*?<\/article>\s*<!-- End Blog Minimal Blocks -->/g;
 const blocks = [...source.matchAll(blockPattern)];
-const articleCount = [...source.matchAll(/<article class="g-mb-100"/g)].length;
+const articleCount = [...source.matchAll(/<article\b/g)].length;
 if (!articleCount || blocks.length !== articleCount || blocks.some(block => !categories.some(category => category.id === block[1]))) {
   throw new Error('Every main resource article needs a valid data-resource-category: technical, news, or researchers.');
 }
