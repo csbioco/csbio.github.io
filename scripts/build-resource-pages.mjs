@@ -30,8 +30,6 @@ for (const category of collections) {
   output = output.replace(/<title>[^<]*<\/title>/, `<title>CSBio ${category.title} - Peptides and Peptide Synthesizers</title>`);
   output = output.replace(/"name": "CSBio Resources and Blog"/, `"name": "CSBio ${category.title}"`);
   output = output.replace(/"description": "Resources, case studies, and news for peptide synthesizers, SPPS, and purification\."/, `"description": "${category.description}"`);
-  // Keep the shared CSBio Blog banner; describe the collection below its dropdown.
-  output = output.replace(/(<h2 id="resources"[^>]*>)Resources(<\/h2>)/, `$1${category.title}$2\n            <p class="g-color-gray-dark-v4 g-mb-30">${category.description}</p>`);
   output = output.replace('<option value="blog.html" selected>', '<option value="blog.html">');
   output = output.replace(`<option value="${category.file}">`, `<option value="${category.file}" selected>`);
   output = output.replace(/(?:[ \t]*\r?\n){4,}/g, '\n\n');
