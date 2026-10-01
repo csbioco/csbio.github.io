@@ -30,6 +30,7 @@ for (const category of collections) {
   output = output.replace(/<title>[^<]*<\/title>/, `<title>CSBio ${category.title} - Peptides and Peptide Synthesizers</title>`);
   output = output.replace(/"name": "CSBio Resources and Blog"/, `"name": "CSBio ${category.title}"`);
   output = output.replace(/"description": "Resources, case studies, and news for peptide synthesizers, SPPS, and purification\."/, `"description": "${category.description}"`);
+  output = output.replace(/(<h2 id="resource-heading"[^>]*>)All Resources(<\/h2>)/, `$1${category.title}$2`);
   output = output.replace('<option value="blog.html" selected>', '<option value="blog.html">');
   output = output.replace(`<option value="${category.file}">`, `<option value="${category.file}" selected>`);
   output = output.replace(/(?:[ \t]*\r?\n){4,}/g, '\n\n');
