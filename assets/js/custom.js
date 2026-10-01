@@ -7,9 +7,10 @@
   var resourceArticles = document.getElementById('resource-articles');
   if (resourceCategory && resourceHeading && resourceArticles) {
     var pagination = document.getElementById('resource-pagination');
+    var categoryOptions = document.getElementById('resource-category-options');
     var pageStatus = document.getElementById('resource-page-status');
     var configuredPageSize = Number(resourceArticles.getAttribute('data-page-size'));
-    var pageSize = Number.isInteger(configuredPageSize) && configuredPageSize > 0 ? configuredPageSize : 10;
+    var pageSize = Number.isInteger(configuredPageSize) && configuredPageSize > 0 ? configuredPageSize : 7;
     var pageCache = new Map();
     var requestNumber = 0;
     var scrollFrame = null;
@@ -130,6 +131,12 @@
         resourceHeading.textContent = content.heading;
         var destination = renderListing(content, url);
         resourceCategory.value = content.category;
+        resourceCategory.textContent = content.heading;
+        resourceCategory.setAttribute('aria-label', 'Browse resources: ' + content.heading);
+        categoryOptions.querySelectorAll('a').forEach(function (option) {
+          if (option.getAttribute('href') === content.category) option.setAttribute('aria-current', 'page');
+          else option.removeAttribute('aria-current');
+        });
         document.title = content.title;
         var schema = document.querySelector('script[type="application/ld+json"]');
         if (schema && content.schema) schema.textContent = content.schema;
@@ -144,8 +151,17 @@
       }
     }
 
-    resourceCategory.addEventListener('change', function () {
-      showCollection(new URL(resourceCategory.value, window.location.href), true);
+    categoryOptions.addEventListener('click', function (event) {
+      var option = event.target.closest('a');
+      if (!option || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      resourceCategory.focus({ preventScroll: true });
+      showCollection(new URL(option.href), true);
+    });
+    // Keep the upward menu visible if the control is near the viewport's top.
+    window.jQuery(resourceCategory.parentElement).on('shown.bs.dropdown', function () {
+      var menuTop = categoryOptions.getBoundingClientRect().top;
+      if (menuTop < 12) window.scrollBy({ top: menuTop - 12, behavior: 'instant' });
     });
     if (pagination) pagination.addEventListener('click', function (event) {
       var link = event.target.closest('a[data-resource-page]');

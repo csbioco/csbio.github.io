@@ -229,21 +229,21 @@
         <div class="col-12 g-mb-80">
           <div>
 
-            <div class="g-mb-150">
-              <label class="sr-only" for="resource-category">Browse resources</label>
-              <select id="resource-category" class="custom-select rounded-0 w-auto mw-100 g-font-size-14">
-                <option value="blog.html">All Resources</option>
-                <option value="technical-resources.html" selected>Technical Resources</option>
-                <option value="peptide-news.html">Peptide News</option>
-                <option value="leading-peptide-researchers.html">Leading Peptide Researchers</option>
-                <option value="top-posts.html">Top Posts</option>
-              </select>
+            <div class="dropup resource-category-dropdown g-mb-30">
+              <button id="resource-category" type="button" value="technical-resources.html" class="custom-select dropdown-toggle rounded-0 g-font-size-14" data-toggle="dropdown" data-display="static" data-flip="false" aria-label="Browse resources: Technical Resources" aria-haspopup="true" aria-expanded="false" aria-controls="resource-category-options">Technical Resources</button>
+              <div id="resource-category-options" class="dropdown-menu rounded-0" aria-labelledby="resource-category">
+                <a class="dropdown-item" href="blog.html">All Resources</a>
+                <a class="dropdown-item" href="technical-resources.html" aria-current="page">Technical Resources</a>
+                <a class="dropdown-item" href="peptide-news.html">Peptide News</a>
+                <a class="dropdown-item" href="leading-peptide-researchers.html">Leading Peptide Researchers</a>
+                <a class="dropdown-item" href="top-posts.html">Top Posts</a>
+              </div>
             </div>
 
             <h2 id="resource-heading" class="sr-only" aria-live="polite" tabindex="-1">Technical Resources</h2>
 
             <!-- Change data-page-size here, then rebuild the resource pages. -->
-            <div id="resource-articles" data-page-size="10">
+            <div id="resource-articles" data-page-size="7">
             <!-- Blog Minimal Blocks -->
             <article class="g-mb-50" data-resource-category="technical">
               <div class="g-mb-30">

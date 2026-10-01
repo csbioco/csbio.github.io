@@ -1,4 +1,41 @@
 /* Add here all your css styles (customizations) */
+.resource-category-dropdown {
+  width: 226px;
+  max-width: 100%;
+}
+
+.resource-category-dropdown .dropdown-toggle {
+  position: relative;
+  background-image: none;
+  text-align: left;
+}
+
+.resource-category-dropdown .dropdown-toggle::after {
+  position: absolute;
+  top: 50%;
+  right: .75rem;
+  margin-top: -.15em;
+}
+
+.resource-category-dropdown .dropdown-menu {
+  min-width: 100%;
+  font-size: 14px;
+  border-color: #ced4da;
+}
+
+.resource-category-dropdown .dropdown-item {
+  padding: .375rem .75rem;
+  color: #495057;
+}
+
+.resource-category-dropdown .dropdown-item[aria-current="page"],
+.resource-category-dropdown .dropdown-item:hover,
+.resource-category-dropdown .dropdown-item:focus,
+.resource-category-dropdown .dropdown-item:active {
+  color: #495057;
+  background-color: #f7f7f7;
+}
+
 /* Keep navbar items on a single line */
 .navbar-nav .nav-link {
   white-space: nowrap;

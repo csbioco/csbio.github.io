@@ -31,8 +31,9 @@ for (const category of collections) {
   output = output.replace(/"name": "CSBio Resources and Blog"/, `"name": "CSBio ${category.title}"`);
   output = output.replace(/"description": "Resources, case studies, and news for peptide synthesizers, SPPS, and purification\."/, `"description": "${category.description}"`);
   output = output.replace(/(<h2 id="resource-heading"[^>]*>)All Resources(<\/h2>)/, `$1${category.title}$2`);
-  output = output.replace('<option value="blog.html" selected>', '<option value="blog.html">');
-  output = output.replace(`<option value="${category.file}">`, `<option value="${category.file}" selected>`);
+  output = output.replace(/(<button id="resource-category"[^>]*>)[^<]*(<\/button>)/, (match, opening, closing) => opening.replace('value="blog.html"', `value="${category.file}"`).replace('Browse resources: All Resources', `Browse resources: ${category.title}`) + category.title + closing);
+  output = output.replace('href="blog.html" aria-current="page"', 'href="blog.html"');
+  output = output.replace(`class="dropdown-item" href="${category.file}"`, `class="dropdown-item" href="${category.file}" aria-current="page"`);
   output = output.replace(/(?:[ \t]*\r?\n){4,}/g, '\n\n');
   output = '<!-- Generated from blog.html by scripts/build-resource-pages.mjs. -->\n' + output.trimStart();
   writeFileSync(new URL(category.file, root), output);
