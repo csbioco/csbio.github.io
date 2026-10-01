@@ -224,12 +224,12 @@
     <!-- End Breadcrumbs -->
 
     <!-- Blog Minimal Blocks -->
-    <div id="resources" class="container g-pt-100 g-pb-20">
+    <div id="resources" class="container g-pt-40 g-pb-20">
       <div class="row justify-content-between">
         <div class="col-12 g-mb-80">
           <div>
 
-            <div class="g-mb-30">
+            <div class="g-mb-90">
               <label class="sr-only" for="resource-category">Browse resources</label>
               <select id="resource-category" class="custom-select rounded-0 w-auto mw-100 g-font-size-14">
                 <option value="blog.html">All Resources</option>
@@ -240,9 +240,10 @@
               </select>
             </div>
 
-            <h2 id="resource-heading" class="h2 g-color-black g-font-weight-400 mb-3" aria-live="polite">Leading Peptide Researchers</h2>
+            <h2 id="resource-heading" class="h2 g-color-black g-font-weight-400 mb-3" aria-live="polite" tabindex="-1">Leading Peptide Researchers</h2>
 
-            <div id="resource-articles">
+            <!-- Change data-page-size here, then rebuild the resource pages. -->
+            <div id="resource-articles" data-page-size="10">
             <!-- Blog Minimal Blocks -->
             <article class="g-mb-100" data-resource-category="researchers">
               <div class="g-mb-30">
@@ -296,6 +297,8 @@
             <!-- End Blog Minimal Blocks -->
 
             </div>
+            <nav id="resource-pagination" class="g-brd-top g-brd-gray-light-v4 g-pt-20" aria-label="Resource pages" hidden></nav>
+            <span id="resource-page-status" class="sr-only" role="status"></span>
           </div>
         </div>
 
