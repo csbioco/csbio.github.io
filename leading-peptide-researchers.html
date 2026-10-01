@@ -227,8 +227,19 @@
     <!-- Blog Minimal Blocks -->
     <div class="container g-pt-100 g-pb-20">
       <div class="row justify-content-between">
-        <div class="col-lg-9 order-lg-2 g-mb-80">
-          <div class="g-pl-20--lg">
+        <div class="col-12 g-mb-80">
+          <div>
+
+            <div class="g-mb-30">
+              <label class="sr-only" for="resource-category">Browse resources</label>
+              <select id="resource-category" class="custom-select rounded-0 w-auto mw-100 g-font-size-14">
+                <option value="blog.html">All Resources</option>
+                <option value="technical-resources.html">Technical Resources</option>
+                <option value="peptide-news.html">Peptide News</option>
+                <option value="leading-peptide-researchers.html" selected>Leading Peptide Researchers</option>
+                <option value="top-posts.html">Top Posts</option>
+              </select>
+            </div>
 
             <h2 id="resources" class="h2 g-color-black g-font-weight-800 mb-3">Leading Peptide Researchers</h2>
 
@@ -245,7 +256,7 @@
             </article>
             <!-- End Blog Minimal Blocks -->
 
-                                                            <!-- Blog Minimal Blocks -->
+            <!-- Blog Minimal Blocks -->
             <article class="g-mb-100" data-resource-category="researchers">
               <div class="g-mb-30">
                 <span class="d-block g-color-gray-dark-v4 g-font-weight-700 g-font-size-12 text-uppercase mb-2">22 April 2026</span>
@@ -258,7 +269,7 @@
             </article>
             <!-- End Blog Minimal Blocks -->
 
-                                                <!-- Blog Minimal Blocks -->
+            <!-- Blog Minimal Blocks -->
             <article class="g-mb-100" data-resource-category="researchers">
               <div class="g-mb-30">
                 <span class="d-block g-color-gray-dark-v4 g-font-weight-700 g-font-size-12 text-uppercase mb-2">17 February 2026</span>
@@ -287,29 +298,6 @@
           </div>
         </div>
 
-        <div class="col-lg-3 order-lg-1 g-brd-right--lg g-brd-gray-light-v4 g-mb-80">
-          <div class="g-pr-20--lg">
-              <hr class="g-brd-gray-light-v4 g-mt-50 mb-0">
-
-            <div id="stickyblock-start" class="js-sticky-block g-sticky-block--lg g-pt-50" data-start-point="#stickyblock-start" data-end-point="#stickyblock-end">
-              <!-- Resource Categories -->
-              <nav class="g-mb-50" aria-label="Resource categories">
-                <h3 class="h5 g-color-black g-font-weight-600 mb-4">Categories</h3>
-                <ul class="list-unstyled g-font-size-13 mb-0">
-                  <li class="g-mb-15"><a class="u-link-v5 g-color-black g-color-primary--hover" href="blog.html">All Resources</a></li>
-                  <li class="g-mb-15"><a class="u-link-v5 g-color-black g-color-primary--hover" href="technical-resources.html">Technical Resources</a></li>
-                  <li class="g-mb-15"><a class="u-link-v5 g-color-black g-color-primary--hover" href="peptide-news.html">Peptide News</a></li>
-                  <li><a class="u-link-v5 g-color-black g-color-primary--hover" href="leading-peptide-researchers.html" aria-current="page">Leading Peptide Researchers</a></li>
-                </ul>
-              </nav>
-              <!-- End Resource Categories -->
-
-              <hr class="g-brd-gray-light-v4 g-my-50">
-
-
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <!-- End Blog Minimal Blocks -->
@@ -431,7 +419,6 @@
   <script src="assets/js/components/hs.header.js"></script>
   <script src="assets/js/helpers/hs.hamburgers.js"></script>
   <script src="assets/js/components/hs.tabs.js"></script>
-  <script src="assets/js/components/hs.sticky-block.js"></script>
   <script src="assets/js/components/hs.go-to.js"></script>
 
   <!-- JS Customization -->
@@ -459,10 +446,6 @@
           breakpoint: 991
         });
 
-        // initialization of sticky blocks
-        setTimeout(function() {
-          $.HSCore.components.HSStickyBlock.init('.js-sticky-block');
-        }, 300);
       });
 
       $(window).on('resize', function () {
