@@ -1,4 +1,35 @@
 /* Add here all your css styles (customizations) */
+/* Return from an article to its resource collection. */
+.resource-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-bottom: 12px;
+  color: #2f3192;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.resource-back-link:hover,
+.resource-back-link:focus {
+  color: #2f3192;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resource-back-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.resource-back-link.g-color-white {
+  padding: 0 12px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
 /* Keep navbar items on a single line */
 .navbar-nav .nav-link {
   white-space: nowrap;
