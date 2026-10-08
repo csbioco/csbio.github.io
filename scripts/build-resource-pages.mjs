@@ -40,46 +40,19 @@ function card(article, layout = 'text', search = false) {
     </div>
   </article>`;
 }
-function navigation(active) {
-  return `<nav class="resource-nav" aria-label="Resource collections">
-    <a href="blog.html"${active === 'all' ? ' aria-current="page"' : ''}>All Resources</a>
-    ${categories.map(category => `<a href="${category.file}"${category.id === active ? ' aria-current="page"' : ''}>${escape(category.name)}</a>`).join('\n')}
-    <a href="top-posts.html"${active === 'top' ? ' aria-current="page"' : ''}>Top Posts</a>
-  </nav>`;
-}
-function searchForm(collection = false) {
-  return `<form class="resource-search" role="search" method="get">
-    <label for="resource-query">${collection ? 'Search this collection' : 'Search the resource library'}</label>
-    <div class="resource-search-row"><input id="resource-query" name="q" type="search" placeholder="Try SPPS, heating, or a researcher’s name…" autocomplete="off"><button type="submit"><i class="fa fa-search" aria-hidden="true"></i> Search</button></div>
-  </form>`;
-}
-function listing(list, layout, pageSize, title, landing = false, topicFilter = false) {
-  return `<section id="resources" class="container resource-listing" data-resource-library data-layout="${layout}" data-page-size="${pageSize}"${landing ? ' data-landing' : ''} aria-labelledby="resource-heading">
+function listing(list, layout, pageSize, title, topicFilter = false) {
+  return `<section id="resources" class="container resource-listing" data-resource-library data-layout="${layout}" data-page-size="${pageSize}" aria-labelledby="resource-heading">
     <div class="resource-list-heading"><h2 id="resource-heading" tabindex="-1">${title}</h2><p id="resource-result-status" role="status" aria-live="polite">${list.length} resources${layout === 'news' ? ' · Newest first' : ''}</p></div>
     ${topicFilter ? `<div class="resource-filter"><label for="resource-topic">Filter by topic</label><select id="resource-topic"><option value="">All topics</option>${topics.filter(topic => topic.category === 'technical').map(topic => `<option value="${topic.id}">${escape(topic.name)}</option>`).join('')}</select></div>` : ''}
     <p id="resource-filter-summary" hidden></p>
     <div id="resource-list" class="resource-grid resource-grid--${layout}">${list.map(article => card(article, layout, true)).join('\n')}</div>
     <div id="resource-empty" class="resource-empty" hidden><h3>No resources found</h3><p>Try a broader term or clear the filters to browse this collection.</p></div>
-    <div class="resource-results-footer"><a id="resource-reset" href="${landing ? 'blog.html#resources' : '#resources'}" hidden>Clear search and filters</a><nav id="resource-pages" aria-label="Resource pages" hidden></nav></div>
+    <div class="resource-results-footer"><a id="resource-reset" href="#resources" hidden>Clear search and filters</a><nav id="resource-pages" aria-label="Resource pages" hidden></nav></div>
   </section>`;
 }
 function landing() {
-  // Unify v2.6.2: home/home-discover.html search, icon blocks, and section structure.
-  // Keep existing content; omit the demo's stock images, ratings, counters, and testimonials.
-  const hero = `<section class="g-bg-secondary"><div class="container text-center g-py-60">
-    <h1 class="h1 g-color-black g-font-weight-600 text-uppercase g-mb-30">Resources</h1>
-    <form data-resource-search role="search" method="get">
-      <div class="g-max-width-540 mx-auto g-mb-20"><label for="resource-query" class="sr-only">Search the resource library</label><div class="input-group">
-        <input id="resource-query" name="q" type="search" class="form-control g-font-size-16" placeholder="Search resources" autocomplete="off">
-        <div class="input-group-append"><button class="btn btn-primary g-font-size-18 g-py-12 g-px-25" type="submit" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button></div>
-      </div></div>
-    </form>
-  </div></section>`;
+  // Unify v2.6.2: home/home-discover.html article and section structure.
   const sectionHeading = (name, href) => `<div class="mb-5"><h2 class="h3 g-color-black mb-0">${href ? `<a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="${href}">${escape(name)}</a>` : escape(name)}</h2><div class="d-inline-block g-width-50 g-height-1 g-bg-black"></div></div>`;
-  const top = `<section class="container g-pt-100 g-pb-40" aria-label="Top Categories">${sectionHeading('Top Categories')}<div class="row align-items-center">${categories.map(category => {
-    const icon = topics.find(topic => topic.category === category.id).icon;
-    return `<div class="col-sm-6 col-lg-4 g-mb-30"><div class="media g-mb-20"><div class="d-flex mr-4"><span class="u-icon-v2 u-icon-size--sm g-color-white g-bg-primary g-font-size-16 rounded-circle"><i class="fa fa-${icon}" aria-hidden="true"></i></span></div><div class="media-body align-self-center"><h3 class="g-font-size-17 mb-0"><a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="${category.file}">${escape(category.name)}</a></h3></div></div></div>`;
-  }).join('')}</div></section>`;
   function featuredCard(article, category) {
     if (category.id === 'technical') {
       // Use Unify's text-only article block for a balanced landing-page preview row.
@@ -96,22 +69,21 @@ function landing() {
     }
     return `<div class="col-12 g-mb-30"><article class="g-brd-bottom g-brd-gray-light-v3 g-pb-30"><p class="g-color-gray-dark-v4 g-font-size-12 mb-2">${date(article)}</p><h3 class="h4 g-color-black mb-3"><a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="${article.href}">${escape(article.title)}</a></h3><p class="g-color-gray-dark-v4">${escape(article.description)}</p><a href="${article.href}">Read more</a></article></div>`;
   }
-  const sections = categories.map(category => {
+  const sections = categories.map((category, index) => {
     const selected = category.id === 'technical' ? ['blog/practical-guide-spps.html', 'blog/choosing-a-peptide-synthesizer.html', 'blog/optimizing-temperature-time-kinetics-spps.html'].map(href => articles.find(article => article.href === href)) : grouped(category.id).slice(0, category.id === 'researchers' ? 2 : 3);
-    return `<section${category.id === 'news' ? ' class="g-bg-secondary"' : ''}><div class="container g-pt-100 g-pb-70">${sectionHeading(category.name, category.file)}<div class="row">${selected.map(article => featuredCard(article, category)).join('')}</div>${link(category.file, category.action)}</div></section>`;
+    return `<section${category.id === 'news' ? ' class="g-bg-secondary"' : ''}><div class="container ${index === 0 ? 'g-pt-50' : 'g-pt-100'} g-pb-70">${sectionHeading(category.name, category.file)}<div class="row">${selected.map(article => featuredCard(article, category)).join('')}</div>${link(category.file, category.action)}</div></section>`;
   }).join('\n');
-  return hero + `<div class="container">${navigation('all')}</div>` + listing(articles, 'text', 7, 'All Resources', true) + `<div id="resource-discover">${top}${sections}</div>`;
+  return `<div id="resources" tabindex="-1"><h1 class="sr-only">Resources</h1>${sections}</div>`;
 }
 function collection(category) {
   const list = category.id === 'top' ? articles.filter(article => article.topPost).sort((a, b) => a.topPost - b.topPost) : grouped(category.id);
   return `<section class="resource-hero resource-hero--collection"><div class="container"><nav class="resource-breadcrumb" aria-label="Breadcrumb"><a href="blog.html">Resources</a><span aria-hidden="true">/</span><span aria-current="page">${escape(category.name)}</span></nav><p class="resource-eyebrow">${escape(category.eyebrow)}</p><h1>${escape(category.name)}</h1><p class="resource-intro">${escape(category.description)}</p></div></section>
-    <div class="container">${navigation(category.id)}<div class="resource-collection-search">${searchForm(true)}</div></div>
-    ${listing(list, category.layout, category.pageSize, category.id === 'news' ? 'Latest updates' : category.id === 'researchers' ? 'Conversations with leading researchers' : 'Browse the collection', false, category.id === 'technical')}`;
+    ${listing(list, category.layout, category.pageSize, category.id === 'news' ? 'Latest updates' : category.id === 'researchers' ? 'Conversations with leading researchers' : 'Browse the collection', category.id === 'technical')}`;
 }
 const topPosts = {id:'top', file:'top-posts.html', name:'Top Posts', description:'Featured guides, comparisons, and case studies for peptide synthesis.', eyebrow:'A place to start', layout:'masonry', pageSize:9};
 for (const category of [null, ...categories, topPosts]) {
   const name = category?.name || 'Resources';
-  const description = category?.description || 'Discover technical guides, peptide news, and profiles of leading peptide researchers. Search the CSBio resource library by topic.';
+  const description = category?.description || 'Discover technical guides, peptide news, and profiles of leading peptide researchers. Browse the CSBio resource library.';
   const replacements = {TITLE:escape(`CSBio ${name} - Peptides and Peptide Synthesizers`), DESCRIPTION:escape(description), SCHEMA_NAME:JSON.stringify(`CSBio ${name}`), SCHEMA_DESCRIPTION:JSON.stringify(description), RESOURCE_CONTENT:category ? collection(category) : landing()};
   const output = template.replace(/\{\{(\w+)\}\}/g, (_, key) => replacements[key]).replace(/[\t ]+$/gm, '');
   writeFileSync(new URL(category?.file || 'blog.html', root), '<!-- Generated by scripts/build-resource-pages.mjs. Edit assets/data/resources.json and scripts/templates/resources.html. -->\n' + output);

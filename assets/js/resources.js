@@ -3,8 +3,6 @@
   'use strict';
   var library = document.querySelector('[data-resource-library]');
   if (!library) return;
-  var form = document.querySelector('.resource-search, [data-resource-search]');
-  var query = document.getElementById('resource-query');
   var topic = document.getElementById('resource-topic');
   var grid = document.getElementById('resource-list');
   var cards = Array.from(grid.children);
@@ -14,8 +12,6 @@
   var empty = document.getElementById('resource-empty');
   var reset = document.getElementById('resource-reset');
   var pages = document.getElementById('resource-pages');
-  var discover = document.getElementById('resource-discover');
-  var isLanding = library.hasAttribute('data-landing');
   var pageSize = Number(library.dataset.pageSize);
   var masonry;
   var normalize = function (value) { return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); };
@@ -42,11 +38,11 @@
 
   function render() {
     var url = new URL(window.location.href);
+    // Keep existing collection search URLs usable after removing the search form.
     var value = url.searchParams.get('q') || '';
     var selectedTopic = url.searchParams.get('topic') || '';
     if (topic && !Array.from(topic.options).some(function (option) { return option.value === selectedTopic; })) selectedTopic = '';
     if (!topic) selectedTopic = '';
-    query.value = value;
     if (topic) topic.value = selectedTopic;
     var words = normalize(value).split(' ').filter(Boolean);
     var filtered = cards.filter(function (card) {
@@ -59,18 +55,13 @@
     else url.searchParams.delete('page');
     if (url.searchParams.has('topic') && !selectedTopic) url.searchParams.delete('topic');
     if (url.href !== window.location.href) history.replaceState(history.state, '', url);
-    // ?q= and #resources also allow browsing the full index with an empty search.
-    var showResults = !isLanding || url.searchParams.has('q') || current > 1 || url.hash === '#resources';
-    library.hidden = !showResults;
-    if (discover) discover.hidden = showResults;
     var visible = new Set(filtered.slice((current - 1) * pageSize, current * pageSize));
     cards.forEach(function (card) { card.hidden = !visible.has(card); });
     empty.hidden = filtered.length !== 0;
     status.textContent = filtered.length + (filtered.length === 1 ? ' resource' : ' resources') + (filtered.length ? ' · Page ' + current + ' of ' + count : '') + (library.dataset.layout === 'news' ? ' · Newest first' : '');
-    if (isLanding) heading.textContent = value.trim() ? 'Search results' : 'All Resources';
     summary.textContent = (value.trim() ? 'Search: “' + value.trim() + '”' : '') + (selectedTopic ? (value.trim() ? ' · ' : '') + topic.selectedOptions[0].textContent : '');
     summary.hidden = !summary.textContent;
-    reset.hidden = !(value || selectedTopic || isLanding);
+    reset.hidden = !(value || selectedTopic);
     pages.replaceChildren();
     pages.hidden = count <= 1;
     if (count > 1) {
@@ -101,14 +92,6 @@
     }
   }
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var url = new URL(window.location.href);
-    url.searchParams.set('q', query.value.trim());
-    url.searchParams.delete('page');
-    url.hash = 'resources';
-    navigate(url, true);
-  });
   if (topic) topic.addEventListener('change', function () {
     var url = new URL(window.location.href);
     if (topic.value) url.searchParams.set('topic', topic.value);
@@ -126,9 +109,8 @@
     event.preventDefault();
     var url = new URL(window.location.href);
     ['q', 'topic', 'page'].forEach(function (key) { url.searchParams.delete(key); });
-    url.hash = isLanding ? '' : 'resources';
-    navigate(url, !isLanding);
-    if (isLanding) { query.focus(); form.scrollIntoView({ block: 'center' }); }
+    url.hash = 'resources';
+    navigate(url, true);
   });
   window.addEventListener('popstate', render);
   window.addEventListener('hashchange', render);
