@@ -1,0 +1,455 @@
+{
+  "categories": [
+    {
+      "id": "technical",
+      "file": "technical-resources.html",
+      "name": "Technical Resources",
+      "description": "Practical guides, equipment selection, and ideas for better peptide synthesis and purification.",
+      "eyebrow": "Methods, tools & applications",
+      "action": "Explore technical resources",
+      "layout": "masonry",
+      "pageSize": 9
+    },
+    {
+      "id": "news",
+      "file": "peptide-news.html",
+      "name": "Peptide News",
+      "description": "Quarterly roundups and developments from across peptide science, research, and drug development.",
+      "eyebrow": "The latest in peptide science",
+      "action": "Browse all peptide news",
+      "layout": "news",
+      "pageSize": 7
+    },
+    {
+      "id": "researchers",
+      "file": "leading-peptide-researchers.html",
+      "name": "Researcher Profiles",
+      "description": "Meet leading peptide researchers. Explore their discoveries, the paths that shaped their careers, and their advice for the next generation.",
+      "eyebrow": "Leading Peptide Researchers",
+      "action": "Meet the researchers",
+      "layout": "profiles",
+      "pageSize": 8
+    }
+  ],
+  "topics": [
+    {
+      "id": "fundamentals",
+      "name": "SPPS fundamentals",
+      "description": "Build a foundation in peptide synthesis.",
+      "icon": "flask",
+      "category": "technical"
+    },
+    {
+      "id": "equipment",
+      "name": "Choosing a synthesizer",
+      "description": "Find the right equipment for your work.",
+      "icon": "sliders",
+      "category": "technical"
+    },
+    {
+      "id": "heating",
+      "name": "Temperature & heating",
+      "description": "Explore thermal methods and reaction kinetics.",
+      "icon": "thermometer-half",
+      "category": "technical"
+    },
+    {
+      "id": "scale-up",
+      "name": "Scale-up & manufacturing",
+      "description": "Move from discovery to production.",
+      "icon": "cogs",
+      "category": "technical"
+    },
+    {
+      "id": "news",
+      "name": "Peptide news",
+      "description": "Catch up on research and industry updates.",
+      "icon": "newspaper-o",
+      "category": "news"
+    },
+    {
+      "id": "researchers",
+      "name": "Researcher profiles",
+      "description": "Get to know the people behind the science.",
+      "icon": "users",
+      "category": "researchers"
+    }
+  ],
+  "articles": [
+    {
+      "href": "monthly/news-Q32026.html",
+      "category": "news",
+      "title": "Quarterly Update - Q3 2026 Peptide News",
+      "description": "The third quarter of 2026 brought notable momentum to peptide drug development, marked by an influx of oral peptide drug approvals, novel inhaled peptide delivery models, exciting advances in personalized cancer vaccines, and a welcome shift of attention toward women's health.",
+      "date": "2026-10-02",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/james-checco-interview.html",
+      "category": "researchers",
+      "title": "Peptide Signaling and Receptor Discovery: A Conversation with James Checco",
+      "description": "In this interview, James Checco shares his path into chemical biology, how his lab studies peptide-receptor interactions and D-amino acid-containing peptides, and his approach to mentoring independent researchers.",
+      "person": "James Checco",
+      "image": "assets/img/blog/james-checco-professor.jpg",
+      "imageAlt": "Professor James Checco",
+      "imagePosition": "50% 22%",
+      "topics": [
+        "researchers"
+      ]
+    },
+    {
+      "href": "blog/optimizing-temperature-time-kinetics-spps.html",
+      "category": "technical",
+      "title": "Optimizing Temperature, Time, and Kinetics in Research-Scale SPPS",
+      "description": "How temperature and coupling time influence reaction kinetics, side reactions, and crude purity in research-scale peptide synthesis. Explore model peptide results, coupling chemistries, and the role of solvent preheating.",
+      "topics": [
+        "heating",
+        "fundamentals"
+      ],
+      "format": "Technical guide"
+    },
+    {
+      "href": "blog/scaling-up-spps-thermal-technology.html",
+      "category": "technical",
+      "title": "Scaling Up SPPS: Choosing the Right Thermal Technology",
+      "description": "How temperature control affects crude purity, yield, and process consistency as peptide synthesis moves from research to pilot and commercial scale. Explore conduction, microwave, and induction heating, solvent pre-heating, and real-time temperature feedback.",
+      "topics": [
+        "heating",
+        "scale-up"
+      ],
+      "format": "Technical guide"
+    },
+    {
+      "href": "monthly/news-Q22026.html",
+      "category": "news",
+      "title": "Quarterly Update - Q2 2026 Peptide News",
+      "description": "The second quarter of 2026 has been a bustling period for peptide drug development, with continued growth in obesity and metabolic health and new developments in oncology and pain management. We’ve highlighted advancements spanning Phase 2/3 data in chronic weight management as well as targeted peptide treatments tackling oncology, rare bone disorders, and chronic inflammation.",
+      "date": "2026-07-08",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/choosing-a-peptide-synthesizer.html",
+      "category": "technical",
+      "title": "How to Choose a Peptide Synthesizer",
+      "description": "A practical CSBio selection guide for choosing the right automated peptide synthesizer for research, process development, pilot production, GMP manufacturing, and commercial scale peptide production.",
+      "topics": [
+        "equipment"
+      ],
+      "format": "Selection guide",
+      "image": "assets/img/synthesizerpictures/CSBio_136X_Peptide_Synthesizer.png",
+      "imageAlt": "CSBio 136X peptide synthesizer",
+      "imageFit": "contain"
+    },
+    {
+      "href": "monthly/news-Q12026.html",
+      "category": "news",
+      "title": "Quarterly Update - Q1 2026 Peptide News",
+      "description": "The start of 2026 has shown that the \"Peptide Renaissance\" is only accelerating. From the landmark approval of the first oral peptide for psoriasis to the massive expansion of the GLP-1 landscape, synthetic peptides continue to move from niche biologics to front-line primary care.",
+      "date": "2026-05-07",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/ved.html",
+      "category": "researchers",
+      "title": "From Gila Monsters to Digital Discovery: Navigating the Future of Peptide Therapeutics with Ved Srivastava",
+      "description": "We continue our profile series with Dr. Ved Srivastava, a name synonymous with peptide science.",
+      "date": "2026-04-22",
+      "person": "Ved Srivastava",
+      "image": "assets/img/blog/ved.avif",
+      "imageAlt": "Ved Srivastava",
+      "imagePosition": "50% 20%",
+      "topics": [
+        "researchers"
+      ]
+    },
+    {
+      "href": "blog/bdelatorre.html",
+      "category": "researchers",
+      "title": "Sustainable Chemistry and the Future of Peptides: A Conversation with Beatriz G. de la Torre",
+      "description": "We continue our interview series profiling the leaders of modern peptide science with Professor Beatriz G. de la Torre, a scientist whose career spans continents and whose research is driving the shift toward sustainability across the field.",
+      "date": "2026-02-17",
+      "person": "Beatriz G. de la Torre",
+      "image": "assets/img/blog/beatriz.jpg",
+      "imageAlt": "Beatriz G. de la Torre",
+      "imagePosition": "50% 20%",
+      "topics": [
+        "researchers"
+      ]
+    },
+    {
+      "href": "blog/modernizingspps.html",
+      "category": "technical",
+      "title": "Modernizing SPPS for Better CMC Outcomes",
+      "description": "Recorded live at TIDES Europe, the leading international conference for peptides, CSBio’s Hanson Chang was invited to showcase the latest solid-phase peptide synthesis technologies to improve CMC outcomes—boosting yield and control while reducing solvent use. The talk highlights practical, scalable approaches to process development and tech transfer in peptide manufacturing.",
+      "date": "2026-02-09",
+      "topPost": 7,
+      "topics": [
+        "scale-up"
+      ],
+      "format": "Recorded talk"
+    },
+    {
+      "href": "monthly/news-Q42025.html",
+      "category": "news",
+      "title": "Quarterly Update - Q4 2025 Peptide News",
+      "description": "Highlights in the peptide world from Q4 2025.",
+      "date": "2026-01-07",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/pat-spps.html",
+      "category": "technical",
+      "title": "An Introduction to Process Analytical Technologies in Solid Phase Peptide Synthesis (SPPS)",
+      "description": "In this resource, we provide an introduction on how process analytical tools such as refractive index, UV, and Raman have been integrated into solid phase peptide synthesis processes.",
+      "topics": [
+        "fundamentals",
+        "scale-up"
+      ],
+      "format": "Technical guide"
+    },
+    {
+      "href": "monthly/news-Q32025.html",
+      "category": "news",
+      "title": "Quarterly Update - Q3 2025 Peptide News",
+      "description": "Highlights in the peptide world from Q3 2025.",
+      "date": "2025-10-12",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/pdawson.html",
+      "category": "researchers",
+      "title": "Phil Dawson Interview: SPPS, Native Chemical Ligation & a Career in Peptide Science",
+      "description": "In a new series, CSBio is profiling the leading peptide researchers of our time, and who better to start with than Phil Dawson.",
+      "person": "Phil Dawson",
+      "image": "assets/img/blog/dawsonlab.jpg",
+      "imageAlt": "The Dawson laboratory group",
+      "imagePosition": "50% 28%",
+      "topics": [
+        "researchers"
+      ]
+    },
+    {
+      "href": "blog/conductionpreheating.html",
+      "category": "technical",
+      "title": "Optimizing SPPS with Conduction Preheating",
+      "description": "In collaboration with Beatriz de la Torre and Fernando Albericio, we evaluated we explored the impact of thermal management on peptide quality, with results published in TKS | TeknoScienze.",
+      "topPost": 8,
+      "topics": [
+        "heating"
+      ],
+      "format": "Case study"
+    },
+    {
+      "href": "monthly/news-Q22025.html",
+      "category": "news",
+      "title": "Quarterly Update - Q2 2025 Peptide News",
+      "description": "There's a lot happening in the peptide world! We share the highlights across the second quarter of 2025 in the peptide space.",
+      "date": "2025-07-17",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "monthly/news-Q12025.html",
+      "category": "news",
+      "title": "Quarterly Update - Q1 2025 Peptide News",
+      "description": "We are back! In this round up, we share the highlights across the first quarter of 2025 in the peptide space.",
+      "date": "2025-04-16",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "monthly/news-Q22024.html",
+      "category": "news",
+      "title": "Quarterly Update - Q2 2024 Peptide News",
+      "description": "In this round up, we share the highlights across the second quarter of 2024 in the peptide space.",
+      "date": "2024-07-03",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/greenchemistry.html",
+      "category": "technical",
+      "title": "CSBio's Peptide Synthesizers and their Role in Green Solid Phase Peptide Synthesis (SPPS)",
+      "description": "In this case study, we showcase a few publications that utilized CSBio's peptide synthesizers in developing green SPPS methods.",
+      "topPost": 2,
+      "topics": [
+        "fundamentals",
+        "scale-up"
+      ],
+      "format": "Case study"
+    },
+    {
+      "href": "monthly/news-march2024.html",
+      "category": "news",
+      "title": "Top 10 Peptide News - March 2024",
+      "description": "In this round up, we share the top 10 news in the peptide world from March 2024.",
+      "date": "2024-03-28",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "monthly/news-feb2024.html",
+      "category": "news",
+      "title": "Top 10 Peptide News - February 2024",
+      "description": "In this round up, we share the top 10 news in the peptide world from February 2024.",
+      "date": "2024-02-27",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/spps-mini-course.html",
+      "category": "technical",
+      "title": "A Mini-Course on Solid Phase Peptide Synthesis (SPPS)",
+      "description": "In this mini-course, we provide a series of 12 short videos that covers different SPPS activation chemistries, resin types and applications, the units in SPPS, an example of how to make a peptide with SPPS, how to prepare reagents, the synthesis cycle, and how to practically make a peptide in the lab.",
+      "topPost": 3,
+      "topics": [
+        "fundamentals"
+      ],
+      "format": "Mini-course"
+    },
+    {
+      "href": "monthly/news-jan2024.html",
+      "category": "news",
+      "title": "Top 10 Peptide News - January 2024",
+      "description": "In this round up, we share the top 10 news in the peptide world from January 2024.",
+      "date": "2024-01-23",
+      "topics": [
+        "news"
+      ],
+      "format": "News roundup"
+    },
+    {
+      "href": "blog/roleoftemp.html",
+      "category": "technical",
+      "title": "The role of temperature in Solid Phase Peptide Synthesis",
+      "description": "In this case study, we evaluate the effect of temperature on the speed of synthesis and crude purity.",
+      "topics": [
+        "heating"
+      ],
+      "format": "Technical guide"
+    },
+    {
+      "href": "blog/conductionandmicrowave.html",
+      "category": "technical",
+      "title": "Comparison of Microwave and Conduction Heating for Solid Phase Peptide Synthesis",
+      "description": "In collaboration with University of California, Davis; UCD evaluated microwave and conduction heating and presented the findings at the 28th American Peptide Symposium",
+      "topPost": 4,
+      "topics": [
+        "heating",
+        "equipment"
+      ],
+      "format": "Comparison"
+    },
+    {
+      "href": "blog/practical-guide-spps.html",
+      "category": "technical",
+      "title": "A Practical Guide to Solid Phase Peptide Synthesis (SPPS)",
+      "description": "In this resource, we provide an extensive guide enabling users to apply the most widely-used synthetic strategies for SPPS, and helpful hints to avoid some of the obstacles that often lead to expensive mistakes and/or poor synthesis yield.",
+      "topPost": 1,
+      "topics": [
+        "fundamentals"
+      ],
+      "format": "Practical guide",
+      "image": "assets/img/blog/practical-guide-scheme1.png",
+      "imageAlt": "Solid phase peptide synthesis reaction scheme",
+      "imageFit": "contain"
+    },
+    {
+      "href": "blog/demyst.html",
+      "category": "technical",
+      "title": "Research Scale Peptide Synthesizers: Demystifying Purity, Synthesis Speed and Waste Generation",
+      "description": "In this article, we provide insight on the drivers and balance between synthesis speed, waste generation, purity, and finding that perfect synthesis protocol for peptide synthesizers.",
+      "topics": [
+        "equipment",
+        "fundamentals"
+      ],
+      "format": "Technical guide"
+    },
+    {
+      "href": "blog/csbioiipress.html",
+      "category": "news",
+      "title": "Introducing the CSBio II - changing the landscape for peptide synthesizer ownership",
+      "description": "CSBio, a leading manufacturer of peptide synthesizers and peptides from Silicon Valley California, is proud to announce the release of the CSBio II Peptide Synthesizer.",
+      "date": "2020-09-14",
+      "topics": [
+        "news"
+      ],
+      "format": "Peptide news"
+    },
+    {
+      "href": "blog/peptide-synthesizer-comparison.html",
+      "category": "technical",
+      "title": "Research Scale Peptide Synthesizer Comparison - A Guide to Choosing a System that fits your needs",
+      "description": "In this article, we've gathered the key things to know to adequately compare the most popular synthesizers on the market for users searching for a peptide synthesizer.",
+      "topPost": 5,
+      "topics": [
+        "equipment"
+      ],
+      "format": "Selection guide"
+    },
+    {
+      "href": "blog/covid.html",
+      "category": "news",
+      "title": "Will the origins of the coronavirus name lead us to the answers for a cure? The peptide therapeutics combating COVID-19",
+      "description": "In this article, we explore the peptide research around the world focused on defeating coronavirus.",
+      "date": "2020-04-08",
+      "topics": [
+        "news"
+      ],
+      "format": "Peptide news"
+    },
+    {
+      "href": "blog/scaleup.html",
+      "category": "technical",
+      "title": "From peptide drug discovery, through process development, to commerical scale manufacturing",
+      "description": "In this case study, we talk about CSBio's peptide synthesizer platform and knowledge that allows companies to utilize our peptide synthesizers during the early days of drug discovery, all way through commerical scale manufacturing",
+      "topPost": 6,
+      "topics": [
+        "scale-up",
+        "equipment"
+      ],
+      "format": "Technical guide",
+      "image": "assets/img/blog/custom936.JPG",
+      "imageAlt": "Commercial scale CSBio peptide synthesis equipment"
+    },
+    {
+      "href": "blog/longpeptide.html",
+      "category": "technical",
+      "title": "Synthesizing a 132-mer peptide with high purity",
+      "description": "Using a CSBio research scale peptide synthesizer, we share a case study of how a 132-mer peptide can be synthesized with high purity",
+      "topPost": 9,
+      "topics": [
+        "fundamentals"
+      ],
+      "format": "Case study",
+      "image": "assets/img/blog/132mer.jpg",
+      "imageAlt": "Results from synthesis of a 132-mer peptide",
+      "imageFit": "contain"
+    }
+  ]
+}
