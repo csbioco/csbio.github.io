@@ -82,10 +82,9 @@ function landing() {
   }).join('')}</div></section>`;
   function featuredCard(article, category) {
     if (category.id === 'technical') {
-      // Unify blog/blog-masonry-col-3.html: image and text-only article blocks.
-      return `<div class="col-md-4 g-mb-30"><article class="u-shadow-v11 g-bg-white g-pos-rel">
-        ${article.image ? `<img class="img-fluid w-100" src="${article.image}" alt="${escape(article.imageAlt)}" loading="lazy" decoding="async">` : ''}
-        <div class="g-pa-30"><h3 class="h5 g-color-black g-font-weight-600 mb-3"><a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="${article.href}">${escape(article.title)}</a></h3><p class="g-color-gray-dark-v4">${escape(article.description)}</p><a href="${article.href}">Read more</a></div>
+      // Use Unify's text-only article block for a balanced landing-page preview row.
+      return `<div class="col-md-4 d-flex g-mb-30"><article class="u-shadow-v11 g-bg-white g-pos-rel d-flex flex-column g-pa-30 w-100">
+        <h3 class="h5 g-color-black g-font-weight-600 mb-3"><a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="${article.href}">${escape(article.title)}</a></h3><p class="g-color-gray-dark-v4">${escape(article.description)}</p><a class="mt-auto align-self-start" href="${article.href}">Read more</a>
       </article></div>`;
     }
     if (category.id === 'researchers') {
