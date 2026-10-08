@@ -88,10 +88,6 @@
 #resource-pages ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
 #resource-pages :is(a, span) { display: block; padding: 8px 14px; border: 1px solid var(--resource-line); color: var(--resource-blue); }
 #resource-pages [aria-current] { background: var(--resource-blue); color: white; border-color: var(--resource-blue); }
-@media (min-width: 992px) {
-  .resource-page .navbar-expand-lg .navbar-collapse { min-width: 0; flex: 1 !important; }
-  .resource-page .navbar-expand-lg .navbar-nav { flex-wrap: wrap; }
-}
 @media (max-width: 1199px) {
   .resource-grid--masonry { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .is-masonry > .resource-card { width: calc((100% - 28px) / 2); }
