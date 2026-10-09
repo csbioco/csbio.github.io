@@ -1,4 +1,21 @@
 /* Add here all your css styles (customizations) */
+/* The Resources link navigates; its adjacent disclosure opens the sections. */
+.site-resources-nav { position: relative; display: flex; align-items: center; flex-shrink: 0; }
+.site-resources-toggle { display: inline-flex; align-items: center; justify-content: center; width: 26px; min-height: 32px; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.site-resources-toggle > span { width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.site-resources-toggle[aria-expanded="true"] > span { transform: translateY(2px) rotate(225deg); }
+.site-resources-toggle:focus-visible, .site-resources-menu a:focus-visible { outline: 2px solid #2f3192; outline-offset: 2px; }
+.site-resources-menu { position: absolute; z-index: 20; top: 100%; left: 0; min-width: 240px; margin: 0; padding: 10px 0; border-top: 2px solid #2f3192; background: #fff; }
+.site-resources-menu[hidden] { display: none !important; }
+#js-header .site-resources-menu .nav-link { display: block; padding: 10px 20px; color: #424653; font-size: 13px; font-weight: 400; text-transform: none; }
+#js-header .site-resources-menu .nav-link:hover, #js-header .site-resources-menu .nav-link:focus { color: #2f3192; background: #f4f5f9; text-decoration: none; }
+@media (max-width: 991px) {
+  .site-resources-nav { flex-wrap: wrap; }
+  .site-resources-nav > .nav-link { flex: 1; }
+  .site-resources-toggle { width: 44px; min-height: 44px; }
+  .site-resources-menu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
+}
+
 /* Grant winner profiles remain readable within the two-column archive. */
 .grant-winner-card {
   height: 100%;

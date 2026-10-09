@@ -52,7 +52,7 @@ function listing(list, layout, pageSize, title, topicFilter = false) {
 }
 function landing() {
   // Unify v2.6.2: home/home-discover.html article and section structure.
-  const sectionHeading = (name, href) => `<div class="mb-5"><h2 class="h3 g-color-black mb-0">${href ? `<a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="${href}">${escape(name)}</a>` : escape(name)}</h2><div class="d-inline-block g-width-50 g-height-1 g-bg-black"></div></div>`;
+  const sectionHeading = name => `<div class="mb-5"><h2 class="h3 g-color-black mb-0">${escape(name)}</h2><div class="d-inline-block g-width-50 g-height-1 g-bg-black"></div></div>`;
   function featuredCard(article, category) {
     if (category.id === 'technical') {
       // Use Unify's text-only article block for a balanced landing-page preview row.
@@ -71,9 +71,9 @@ function landing() {
   }
   const sections = categories.map((category, index) => {
     const selected = category.id === 'technical' ? ['blog/practical-guide-spps.html', 'blog/choosing-a-peptide-synthesizer.html', 'blog/optimizing-temperature-time-kinetics-spps.html'].map(href => articles.find(article => article.href === href)) : grouped(category.id).slice(0, category.id === 'researchers' ? 2 : 3);
-    return `<section${category.id === 'news' ? ' class="g-bg-secondary"' : ''}><div class="container ${index === 0 ? 'g-pt-50' : 'g-pt-100'} g-pb-70">${sectionHeading(category.name, category.file)}<div class="row">${selected.map(article => featuredCard(article, category)).join('')}</div>${link(category.file, category.action)}</div></section>`;
+    return `<section${category.id === 'news' ? ' class="g-bg-secondary"' : ''}><div class="container ${index === 0 ? 'g-pt-50' : 'g-pt-100'} g-pb-70">${sectionHeading(category.name)}<div class="row">${selected.map(article => featuredCard(article, category)).join('')}</div>${link(category.file, category.action)}</div></section>`;
   }).join('\n');
-  return `<div id="resources" tabindex="-1"><h1 class="sr-only">Resources</h1>${sections}</div>`;
+  return `<div id="resources" tabindex="-1"><header class="resource-home-heading"><div class="container"><h1>Resources</h1></div></header>${sections}</div>`;
 }
 function collection(category) {
   const list = category.id === 'top' ? articles.filter(article => article.topPost).sort((a, b) => a.topPost - b.topPost) : grouped(category.id);
@@ -115,3 +115,29 @@ for (const directory of ['blog', 'monthly']) {
   }
 }
 console.log(`${articleCount} article and course pages: shared back navigation`);
+
+// Keep the site's Resources dropdown identical on landing pages and articles.
+// The resource template owns the markup; links are relative to each page.
+const resourceNavigation = template.match(/<!-- Resources navigation -->[\s\S]*?<!-- End Resources navigation -->/)[0];
+const publicPages = ['', 'blog/', 'monthly/'].flatMap(directory =>
+  readdirSync(new URL(directory || './', root), { withFileTypes: true })
+    .filter(entry => entry.isFile() && entry.name.endsWith('.html'))
+    .map(entry => directory + entry.name)
+);
+let navigationCount = 0;
+for (const page of publicPages) {
+  const file = new URL(page, root);
+  const original = readFileSync(file, 'utf8');
+  const newline = original.includes('\r\n') ? '\r\n' : '\n';
+  const prefix = page.includes('/') ? '../' : '';
+  const navigation = resourceNavigation.replace(/href="/g, `href="${prefix}`).replace(/\r?\n/g, newline);
+  const output = original.replace(/<header\b[\s\S]*?<\/header>/, header => {
+    const existing = /<!-- Resources navigation -->[\s\S]*?<!-- End Resources navigation -->/;
+    const legacy = /<li\b[^>]*>\s*<a\b[^>]*>Resources<\/a>\s*<\/li>/;
+    if (!existing.test(header) && !legacy.test(header)) return header;
+    navigationCount++;
+    return header.replace(existing.test(header) ? existing : legacy, navigation);
+  });
+  if (output !== original) writeFileSync(file, output);
+}
+console.log(`${navigationCount} pages: shared Resources dropdown`);
