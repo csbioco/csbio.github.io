@@ -1,14 +1,19 @@
 /* Add here all your css styles (customizations) */
-/* Return from an article to its resource collection. */
+/* Keep article navigation separate from the title and banner. */
+.resource-back-nav {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .resource-back-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  margin-bottom: 12px;
-  color: #2f3192;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 6px;
+  min-height: 24px;
+  padding: 2px 0;
+  color: #636776;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -22,12 +27,6 @@
 .resource-back-link:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
-}
-
-.resource-back-link.g-color-white {
-  padding: 0 12px;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Keep navbar items on a single line */
