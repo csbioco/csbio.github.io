@@ -115,28 +115,3 @@ for (const page of publicPages) {
   if (output !== original) writeFileSync(file, output);
 }
 console.log(`${navigationCount} pages: shared Resources dropdown`);
-
-// Give each resource detail page a quiet, permanent route to its collection.
-// Keep this in the build so new articles and category changes stay in sync.
-for (const article of articles) {
-  const file = new URL(article.href, root);
-  const original = readFileSync(file, 'utf8');
-  const newline = original.includes('\r\n') ? '\r\n' : '\n';
-  const category = categoryFor(article.category);
-  const prefix = '../'.repeat(article.href.split('/').length - 1);
-  const navigation = [
-    '<!-- Resource return navigation -->',
-    '    <nav class="container resource-return" aria-label="More resources">',
-    `      <a class="resource-return-link" href="${escape(prefix + category.file)}"><span aria-hidden="true">&larr;</span> Back to ${escape(category.name)}</a>`,
-    '    </nav>',
-    '    <!-- End Resource return navigation -->'
-  ].join(newline);
-  const existing = /<!-- Resource return navigation -->[\s\S]*?<!-- End Resource return navigation -->/;
-  const marker = ['<!-- Related Posts -->', '<!-- Call to Action -->', '<!-- Footer -->'].find(value => original.includes(value));
-  if (!marker) throw new Error(`Missing article navigation location: ${article.href}`);
-  const output = existing.test(original)
-    ? original.replace(existing, navigation)
-    : original.replace(marker, `${navigation}${newline}${newline}    ${marker}`);
-  if (output !== original) writeFileSync(file, output);
-}
-console.log(`${articles.length} resource pages: category return links`);
