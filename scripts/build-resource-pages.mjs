@@ -115,3 +115,26 @@ for (const page of publicPages) {
   if (output !== original) writeFileSync(file, output);
 }
 console.log(`${navigationCount} pages: shared Resources dropdown`);
+
+// Article return links default to Resources; custom.js uses the actual referring page.
+for (const article of articles) {
+  const file = new URL(article.href, root);
+  const original = readFileSync(file, 'utf8');
+  const newline = original.includes('\r\n') ? '\r\n' : '\n';
+  const prefix = '../'.repeat(article.href.split('/').length - 1);
+  const navigation = [
+    '    <!-- Resource return navigation -->',
+    '    <nav class="container resource-return" aria-label="Return to resources">',
+    `      <a class="resource-return-link" href="${escape(prefix)}blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Back to Resources</span></a>`,
+    '    </nav>',
+    '    <!-- End Resource return navigation -->'
+  ].join(newline);
+  const existing = /^[\t ]*<!-- Resource return navigation -->[\s\S]*?<!-- End Resource return navigation -->/m;
+  const marker = ['<!-- Related Posts -->', '<!-- Call to Action -->', '<!-- Footer -->'].find(value => original.includes(value));
+  if (!marker) throw new Error(`Missing article navigation location: ${article.href}`);
+  const output = existing.test(original)
+    ? original.replace(existing, navigation)
+    : original.replace(new RegExp(`^[\\t ]*${marker}`, 'm'), match => `${navigation}${newline}${newline}${match}`);
+  if (output !== original) writeFileSync(file, output);
+}
+console.log(`${articles.length} resource pages: return links`);

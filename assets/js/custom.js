@@ -1,6 +1,35 @@
 (function () {
   'use strict';
 
+  document.querySelectorAll('.resource-return-link').forEach(function (link) {
+    if (!document.referrer) return;
+    var source;
+    try { source = new URL(document.referrer); }
+    catch (error) { return; }
+    var current = new URL(window.location.href);
+    if (source.origin !== current.origin ||
+        (source.pathname === current.pathname && source.search === current.search)) return;
+
+    var resources = new URL(link.href);
+    var collections = {
+      'blog.html': 'Resources',
+      'technical-resources.html': 'Technical Resources',
+      'peptide-news.html': 'Peptide News',
+      'leading-peptide-researchers.html': 'Researcher Profiles',
+      'top-posts.html': 'Top Posts'
+    };
+    var label = 'Back to previous page';
+    Object.keys(collections).forEach(function (file) {
+      if (source.pathname === new URL(file, resources).pathname) {
+        label = 'Back to ' + collections[file];
+      }
+    });
+    // A real link also works in a new tab and after following in-article anchors.
+    // Retain the referring page's query so its filters and pagination are restored.
+    link.href = source.href;
+    link.querySelector('[data-resource-return-label]').textContent = label;
+  });
+
   document.querySelectorAll('.site-resources-nav').forEach(function (navigation) {
     var toggle = navigation.querySelector('.site-resources-toggle');
     var menu = navigation.querySelector('.site-resources-menu');

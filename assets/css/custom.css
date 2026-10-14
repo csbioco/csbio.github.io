@@ -16,6 +16,12 @@
   .site-resources-menu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
 }
 
+/* Subtle return links after resource articles. */
+.resource-return { padding-bottom: 32px; }
+.resource-return-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #2f3192; font-size: 13px; font-weight: 600; }
+.resource-return-link:hover { color: #21246c; text-decoration: underline; }
+.resource-return-link:focus-visible { outline: 2px solid #2f3192; outline-offset: 4px; }
+
 /* Keep winner cards compact across the responsive archive. */
 .grant-winner-card {
   max-width: 380px;
@@ -81,14 +87,6 @@
 .grant-winner-lab { margin: 24px 0 0; }
 .grant-winner-content a { color: #2f3192; }
 .grant-winner-content a:hover { text-decoration: underline; }
-
-/* Fit captions and biographies comfortably in four desktop columns. */
-@media (min-width: 992px) {
-  .grant-winners-grid { max-width: 1500px; }
-  .grant-winner-caption { right: 18px; bottom: 18px; left: 18px; }
-  .grant-winner-caption h2 { font-size: 22px; }
-  .grant-winner-content { padding: 20px; overflow-wrap: break-word; }
-}
 
 /* Keep navbar items on a single line */
 .navbar-nav .nav-link {
