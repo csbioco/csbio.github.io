@@ -21,7 +21,7 @@ function prepareResourcePage(html, page) {
     if (!articleFiles.has(targetFile.href) || target.pathname === pageURL.pathname) return match;
     target.searchParams.set('returnTo', page);
     return before + escape(href.split(/[?#]/)[0] + target.search + target.hash) + after;
-  }).replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-2$2');
+  }).replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-3$2');
 }
 if (!articles.length || new Set(articles.map(article => article.href)).size !== articles.length) throw new Error('Empty or duplicate resource inventory.');
 for (const article of articles) {
@@ -139,12 +139,11 @@ for (const article of articles) {
   const content = original.replace(/^[\t ]*<!-- Resource return navigation -->[\s\S]*?<!-- End Resource return navigation -->\r?\n(?:\r?\n)?/gm, '');
   const heading = content.match(/^[\t ]*<h1\b[^>]*>/m);
   if (!heading) throw new Error(`Missing article title: ${article.href}`);
-  const light = heading[0].includes('g-color-white');
   const output = prepareResourcePage(content.replace(/^([\t ]*)<h1\b/m, (match, indent) => {
     const navigation = [
       '<!-- Resource return navigation -->',
-      `<nav class="resource-return${light ? ' resource-return--light' : ''}" aria-label="Return navigation">`,
-      `  <a class="resource-return-link" href="${escape(prefix)}blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Back to Resources</span></a>`,
+      '<nav class="resource-return" aria-label="Resource navigation">',
+      `  <a class="resource-return-link" href="${escape(prefix)}blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Resources</span></a>`,
       '</nav>',
       '<!-- End Resource return navigation -->'
     ].map(line => indent + line).join(newline);

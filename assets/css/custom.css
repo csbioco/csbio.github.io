@@ -17,13 +17,10 @@
 }
 
 /* Subtle return links immediately above article titles. */
-.resource-return { margin-bottom: 12px; }
-.resource-return-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #2f3192; font-size: 13px; font-weight: 600; }
+.resource-return { margin-bottom: 12px; text-align: left; }
+.resource-return-link { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; color: #2f3192; font-size: 12px; font-weight: 400; }
 .resource-return-link:hover { color: #21246c; text-decoration: underline; }
 .resource-return-link:focus-visible { outline: 2px solid #2f3192; outline-offset: 4px; }
-.resource-return--light .resource-return-link { padding: 0 12px; border-radius: 3px; background: rgba(0, 0, 0, .65); color: #fff; }
-.resource-return--light .resource-return-link:hover { background: rgba(0, 0, 0, .8); }
-.resource-return--light .resource-return-link:focus-visible { outline-color: #fff; }
 
 /* Keep winner cards compact across the responsive archive. */
 .grant-winner-card {
