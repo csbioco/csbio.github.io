@@ -82,6 +82,13 @@
 .grant-winner-content a { color: #2f3192; }
 .grant-winner-content a:hover { text-decoration: underline; }
 
+/* Fit captions and biographies comfortably in four desktop columns. */
+@media (min-width: 992px) {
+  .grant-winner-caption { right: 18px; bottom: 18px; left: 18px; }
+  .grant-winner-caption h2 { font-size: 22px; }
+  .grant-winner-content { padding: 20px; overflow-wrap: break-word; }
+}
+
 /* Keep navbar items on a single line */
 .navbar-nav .nav-link {
   white-space: nowrap;
