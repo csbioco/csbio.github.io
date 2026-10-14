@@ -11,7 +11,7 @@ const categoryFor = id => categories.find(category => category.id === id);
 const topicFor = id => topics.find(topic => topic.id === id);
 const localFile = file => typeof file === 'string' && !file.includes('..') && !file.includes(':') && existsSync(new URL(file, root));
 const articleFiles = new Set(articles.map(article => new URL(article.href, root).href));
-const versionResourceAssets = html => html.replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-8$2');
+const versionResourceAssets = html => html.replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-9$2');
 function prepareResourcePage(html, page) {
   const pageURL = new URL(page, root);
   return versionResourceAssets(html.replace(/(<a\b[^>]*\bhref=")([^"]+)(")/g, (match, before, href, after) => {
@@ -130,7 +130,7 @@ for (const page of publicPages) {
 }
 console.log(`${navigationCount} pages: shared Resources dropdown`);
 
-// Keep one return link above each article title. custom.js reads the explicit
+// Keep one return link below each article's header. custom.js reads the explicit
 // source carried by resource links, with referrer and Resources fallbacks.
 for (const article of articles) {
   const file = new URL(article.href, root);
@@ -138,17 +138,17 @@ for (const article of articles) {
   const newline = original.includes('\r\n') ? '\r\n' : '\n';
   const prefix = '../'.repeat(article.href.split('/').length - 1);
   const content = original.replace(/^[\t ]*<!-- Resource return navigation -->[\s\S]*?<!-- End Resource return navigation -->\r?\n(?:\r?\n)?/gm, '');
-  const heading = content.match(/^[\t ]*<h1\b[^>]*>/m);
-  if (!heading) throw new Error(`Missing article title: ${article.href}`);
-  const output = prepareResourcePage(content.replace(/^([\t ]*)<h1\b/m, (match, indent) => {
+  const headerEnd = /^([\t ]*)<!-- End Header -->/m;
+  if (!headerEnd.test(content)) throw new Error(`Missing article header: ${article.href}`);
+  const output = prepareResourcePage(content.replace(headerEnd, (match, indent) => {
     const navigation = [
       '<!-- Resource return navigation -->',
-      '<nav class="resource-return" aria-label="Resource navigation">',
+      '<nav class="container resource-return" aria-label="Resource navigation">',
       `  <a class="resource-return-link" href="${escape(prefix)}blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Resources</span></a>`,
       '</nav>',
       '<!-- End Resource return navigation -->'
     ].map(line => indent + line).join(newline);
-    return navigation + newline + match;
+    return match + newline + navigation;
   }), article.href);
   if (output !== original) writeFileSync(file, output);
 }

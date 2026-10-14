@@ -16,18 +16,11 @@
   .site-resources-menu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
 }
 
-/* Subtle return links immediately above article titles. */
-.resource-return { margin-bottom: 12px; text-align: left; transform: translateY(-36px); }
-.resource-return-link { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; color: #888; font-size: 12px; font-weight: 400; }
+/* Place subtle return links below the header without shifting article content. */
+.resource-return { position: relative; z-index: 2; height: 0; text-align: left; }
+.resource-return-link { position: relative; top: 24px; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; color: #888; font-size: 12px; font-weight: 400; }
 .resource-return-link:hover { color: #666; text-decoration: underline; }
 .resource-return-link:focus-visible { outline: 2px solid #888; outline-offset: 4px; }
-/* Align hero links with the main content, outside the narrower title column. */
-@media (min-width: 992px) {
-  .g-bg-cover .resource-return { position: relative; left: calc((100% - 960px + 30px) / 2); }
-}
-@media (min-width: 1200px) {
-  .g-bg-cover .resource-return { left: calc((100% - 1140px + 30px) / 2); }
-}
 
 /* Keep winner cards compact across the responsive archive. */
 .grant-winner-card {
