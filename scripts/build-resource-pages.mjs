@@ -21,7 +21,7 @@ function prepareResourcePage(html, page) {
     if (!articleFiles.has(targetFile.href) || target.pathname === pageURL.pathname) return match;
     target.searchParams.set('returnTo', page);
     return before + escape(href.split(/[?#]/)[0] + target.search + target.hash) + after;
-  }).replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-3$2');
+  }).replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-4$2');
 }
 if (!articles.length || new Set(articles.map(article => article.href)).size !== articles.length) throw new Error('Empty or duplicate resource inventory.');
 for (const article of articles) {
