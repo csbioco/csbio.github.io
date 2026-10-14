@@ -16,8 +16,10 @@
   .site-resources-menu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
 }
 
-/* Grant winner profiles remain readable within the two-column archive. */
+/* Keep winner cards compact across the responsive archive. */
 .grant-winner-card {
+  max-width: 380px;
+  margin: 0 auto;
   height: 100%;
   border: 1px solid #e3e5eb;
   background: #fff;
