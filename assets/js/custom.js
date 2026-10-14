@@ -61,12 +61,38 @@
     var toggle = navigation.querySelector('.site-resources-toggle');
     var menu = navigation.querySelector('.site-resources-menu');
     var links = menu.querySelectorAll('a');
+    var $menu = window.jQuery(menu);
+    var mobile = window.matchMedia('(max-width: 991px)');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     var desktopHover = window.matchMedia('(min-width: 992px) and (hover: hover)');
-    function setOpen(open) {
+    var isOpen = !menu.hidden;
+    function finishSlide(open) {
       menu.hidden = !open;
-      toggle.setAttribute('aria-expanded', String(open));
+      // Let the stylesheet size the menu again after an interrupted animation.
+      $menu.css({ display: '', height: '', paddingTop: '', paddingBottom: '', marginTop: '', marginBottom: '', overflow: '' });
     }
-    toggle.addEventListener('click', function () { setOpen(menu.hidden); });
+    function setOpen(open, immediate) {
+      if (open === isOpen && !immediate) return;
+      isOpen = open;
+      toggle.setAttribute('aria-expanded', String(open));
+      if (immediate || !mobile.matches || reducedMotion.matches) {
+        $menu.stop(true, true);
+        finishSlide(open);
+        return;
+      }
+      // Match the other mobile dropdowns, including reversals during a slide.
+      $menu.stop(true);
+      if (menu.hidden) $menu.hide();
+      menu.hidden = false;
+      $menu[open ? 'slideDown' : 'slideUp']({
+        duration: 400,
+        easing: 'linear',
+        complete: function () { finishSlide(open); }
+      });
+    }
+    toggle.addEventListener('click', function () { setOpen(!isOpen); });
+    mobile.addEventListener('change', function () { setOpen(isOpen, true); });
+    reducedMotion.addEventListener('change', function () { setOpen(isOpen, true); });
     navigation.addEventListener('pointerenter', function (event) {
       if (desktopHover.matches && event.pointerType === 'mouse') setOpen(true);
     });
@@ -77,7 +103,7 @@
       if (!navigation.contains(event.relatedTarget)) setOpen(false);
     });
     navigation.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !menu.hidden) {
+      if (event.key === 'Escape' && isOpen) {
         setOpen(false);
         toggle.focus();
         event.preventDefault();

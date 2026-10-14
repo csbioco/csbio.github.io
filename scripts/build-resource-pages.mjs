@@ -11,9 +11,10 @@ const categoryFor = id => categories.find(category => category.id === id);
 const topicFor = id => topics.find(topic => topic.id === id);
 const localFile = file => typeof file === 'string' && !file.includes('..') && !file.includes(':') && existsSync(new URL(file, root));
 const articleFiles = new Set(articles.map(article => new URL(article.href, root).href));
+const versionResourceAssets = html => html.replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-7$2');
 function prepareResourcePage(html, page) {
   const pageURL = new URL(page, root);
-  return html.replace(/(<a\b[^>]*\bhref=")([^"]+)(")/g, (match, before, href, after) => {
+  return versionResourceAssets(html.replace(/(<a\b[^>]*\bhref=")([^"]+)(")/g, (match, before, href, after) => {
     const target = new URL(href.replaceAll('&amp;', '&'), pageURL);
     const targetFile = new URL(target);
     targetFile.search = '';
@@ -21,7 +22,7 @@ function prepareResourcePage(html, page) {
     if (!articleFiles.has(targetFile.href) || target.pathname === pageURL.pathname) return match;
     target.searchParams.set('returnTo', page);
     return before + escape(href.split(/[?#]/)[0] + target.search + target.hash) + after;
-  }).replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-4$2');
+  }));
 }
 if (!articles.length || new Set(articles.map(article => article.href)).size !== articles.length) throw new Error('Empty or duplicate resource inventory.');
 for (const article of articles) {
@@ -118,13 +119,13 @@ for (const page of publicPages) {
   const newline = original.includes('\r\n') ? '\r\n' : '\n';
   const prefix = page.includes('/') ? '../' : '';
   const navigation = resourceNavigation.replace(/href="/g, `href="${prefix}`).replace(/\r?\n/g, newline);
-  const output = original.replace(/<header\b[\s\S]*?<\/header>/, header => {
+  const output = versionResourceAssets(original.replace(/<header\b[\s\S]*?<\/header>/, header => {
     const existing = /<!-- Resources navigation -->[\s\S]*?<!-- End Resources navigation -->/;
     const legacy = /<li\b[^>]*>\s*<a\b[^>]*>Resources<\/a>\s*<\/li>/;
     if (!existing.test(header) && !legacy.test(header)) return header;
     navigationCount++;
     return header.replace(existing.test(header) ? existing : legacy, navigation);
-  });
+  }));
   if (output !== original) writeFileSync(file, output);
 }
 console.log(`${navigationCount} pages: shared Resources dropdown`);
