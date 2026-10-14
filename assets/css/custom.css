@@ -16,6 +16,12 @@
   .site-resources-menu { position: static; flex-basis: 100%; min-width: 0; box-shadow: none; }
 }
 
+/* Subtle category links after resource articles. */
+.resource-return { padding-bottom: 32px; }
+.resource-return-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #2f3192; font-size: 13px; font-weight: 600; }
+.resource-return-link:hover { color: #21246c; text-decoration: underline; }
+.resource-return-link:focus-visible { outline: 2px solid #2f3192; outline-offset: 4px; }
+
 /* Keep winner cards compact across the responsive archive. */
 .grant-winner-card {
   max-width: 380px;
