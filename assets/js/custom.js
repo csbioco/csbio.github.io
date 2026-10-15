@@ -16,21 +16,7 @@
     var current = new URL(window.location.href);
     var source = localPage(current.searchParams.get('returnTo')) || localPage(document.referrer);
     if (!source || (source.pathname === current.pathname && source.search === current.search)) return;
-    var collections = {
-      'blog.html': 'Resources',
-      'technical-resources.html': 'Technical Resources',
-      'peptide-news.html': 'Peptide News',
-      'leading-peptide-researchers.html': 'Researcher Profiles',
-      'top-posts.html': 'Top Posts'
-    };
-    var label = 'Back to previous page';
-    Object.keys(collections).forEach(function (file) {
-      if (source.pathname === new URL(file, siteRoot).pathname) {
-        label = 'Back to ' + collections[file];
-      }
-    });
     link.href = source.href;
-    link.querySelector('[data-resource-return-label]').textContent = label;
   });
 
   function rememberResourceSource(link) {

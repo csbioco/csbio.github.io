@@ -11,7 +11,7 @@ const categoryFor = id => categories.find(category => category.id === id);
 const topicFor = id => topics.find(topic => topic.id === id);
 const localFile = file => typeof file === 'string' && !file.includes('..') && !file.includes(':') && existsSync(new URL(file, root));
 const articleFiles = new Set(articles.map(article => new URL(article.href, root).href));
-const versionResourceAssets = html => html.replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-9$2');
+const versionResourceAssets = html => html.replace(/((?:src|href)="(?:\.\.\/)*assets\/(?:js\/custom\.js|css\/custom\.css))(?:\?[^"]*)?(")/g, '$1?v=resource-navigation-10$2');
 function prepareResourcePage(html, page) {
   const pageURL = new URL(page, root);
   return versionResourceAssets(html.replace(/(<a\b[^>]*\bhref=")([^"]+)(")/g, (match, before, href, after) => {
@@ -144,7 +144,7 @@ for (const article of articles) {
     const navigation = [
       '<!-- Resource return navigation -->',
       '<nav class="container resource-return" aria-label="Resource navigation">',
-      `  <a class="resource-return-link" href="${escape(prefix)}blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Resources</span></a>`,
+      `  <a class="resource-return-link" href="${escape(prefix)}blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Back</span></a>`,
       '</nav>',
       '<!-- End Resource return navigation -->'
     ].map(line => indent + line).join(newline);
