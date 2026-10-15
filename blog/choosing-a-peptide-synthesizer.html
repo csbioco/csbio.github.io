@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="../assets/css/unify-globals.css">
 
   <!-- CSS Customization -->
-  <link rel="stylesheet" href="../assets/css/custom.css">
+  <link rel="stylesheet" href="../assets/css/custom.css?v=resource-navigation-10">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,9 +160,17 @@
 
   
                    <!-- Blog -->
-                   <li class="nav-item g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
-                    <a href="../blog.html" id="nav-link--features" class="nav-link g-py-7 g-px-0"  aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--features">Resources</a>
+                   <!-- Resources navigation -->
+                  <li class="nav-item site-resources-nav g-mx-10--lg g-mx-15--xl">
+                    <a href="../blog.html" class="nav-link g-py-7 g-px-0">Resources</a>
+                    <button class="site-resources-toggle" type="button" aria-label="Show resource sections" aria-expanded="false" aria-controls="nav-resource-sections"><span aria-hidden="true"></span></button>
+                    <ul class="site-resources-menu list-unstyled u-shadow-v11" id="nav-resource-sections" hidden>
+                      <li><a class="nav-link" href="../technical-resources.html">Technical Resources</a></li>
+                      <li><a class="nav-link" href="../peptide-news.html">Peptide News</a></li>
+                      <li><a class="nav-link" href="../leading-peptide-researchers.html">Researcher Profiles</a></li>
+                    </ul>
                   </li>
+                  <!-- End Resources navigation -->
                   <!-- End Blog -->
 
 
@@ -209,7 +217,11 @@
         </div>
       </header>
       <!-- End Header -->
-
+      <!-- Resource return navigation -->
+      <nav class="container resource-return" aria-label="Resource navigation">
+        <a class="resource-return-link" href="../blog.html"><span aria-hidden="true">&larr;</span> <span data-resource-return-label>Back</span></a>
+      </nav>
+      <!-- End Resource return navigation -->
     
     <!-- Blog Single Item Banner -->
     <section class="g-bg-cover g-bg-size-cover g-bg-white-gradient-opacity-v1--after" data-bg-img-src="">
@@ -358,7 +370,7 @@
               <li><strong>CS536X, CS936S, CS936, and CS936X:</strong> overhead stirring combined with nitrogen bubbling for uniform mixing at larger volumes.</li>
             </ul>
             <p>CSBio uses conductive heating through jacketed reaction vessels, and heat exchangers for pre-heating. A software-controlled heated or chilled circulator can control the vessel temperature during synthesis. Conductive heating is reproducible and scalable from research systems to large commercial systems, avoiding the scale-up limitations associated with microwave or induction heating approaches.</p>
-            <p>For more detail, see CSBio’s resources on <a href="conductionandmicrowave.html">microwave vs. conduction heating</a> and <a href="conductionpreheating.html">conduction preheating in SPPS</a>.</p>
+            <p>For more detail, see CSBio’s resources on <a href="conductionandmicrowave.html?returnTo=blog%2Fchoosing-a-peptide-synthesizer.html">microwave vs. conduction heating</a> and <a href="conductionpreheating.html?returnTo=blog%2Fchoosing-a-peptide-synthesizer.html">conduction preheating in SPPS</a>.</p>
           </div>
 
           <div class="g-mb-60">
@@ -460,7 +472,7 @@
             <article class="u-shadow-v19 g-bg-white h-100">
               <div class="g-bg-white g-pa-30">
                 <span class="d-block g-color-gray-dark-v4 g-font-weight-600 g-font-size-12 text-uppercase mb-2">Resources</span>
-                <h2 class="h5 g-color-black g-font-weight-600 mb-3"><a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="peptide-synthesizer-comparison.html">Research Scale Peptide Synthesizer Comparison</a></h2>
+                <h2 class="h5 g-color-black g-font-weight-600 mb-3"><a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="peptide-synthesizer-comparison.html?returnTo=blog%2Fchoosing-a-peptide-synthesizer.html">Research Scale Peptide Synthesizer Comparison</a></h2>
                 <p class="g-color-gray-dark-v4 g-line-height-1_8">A detailed comparison of research scale peptide synthesizer features, automation, vessel size, and flexibility.</p>
               </div>
             </article>
@@ -470,7 +482,7 @@
             <article class="u-shadow-v19 g-bg-white h-100">
               <div class="g-bg-white g-pa-30">
                 <span class="d-block g-color-gray-dark-v4 g-font-weight-600 g-font-size-12 text-uppercase mb-2">Resources</span>
-                <h2 class="h5 g-color-black g-font-weight-600 mb-3"><a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="demyst.html">Demystifying Purity, Synthesis Speed and Waste Generation</a></h2>
+                <h2 class="h5 g-color-black g-font-weight-600 mb-3"><a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="demyst.html?returnTo=blog%2Fchoosing-a-peptide-synthesizer.html">Demystifying Purity, Synthesis Speed and Waste Generation</a></h2>
                 <p class="g-color-gray-dark-v4 g-line-height-1_8">Understand how protocol choices affect crude purity, synthesis time, and solvent consumption.</p>
               </div>
             </article>
@@ -605,7 +617,7 @@
   <script src="../assets/js/components/hs.go-to.js"></script>
 
   <!-- JS Customization -->
-  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/custom.js?v=resource-navigation-10"></script>
 
   <!-- JS Plugins Init. -->
   <script>
