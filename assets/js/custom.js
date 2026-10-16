@@ -77,6 +77,11 @@
       });
     }
     toggle.addEventListener('click', function () { setOpen(!isOpen); });
+    navigation.querySelector(':scope > .nav-link').addEventListener('click', function (event) {
+      if (!mobile.matches) return;
+      event.preventDefault();
+      setOpen(!isOpen);
+    });
     mobile.addEventListener('change', function () { setOpen(isOpen, true); });
     reducedMotion.addEventListener('change', function () { setOpen(isOpen, true); });
     navigation.addEventListener('pointerenter', function (event) {

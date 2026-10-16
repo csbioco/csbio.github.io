@@ -1,5 +1,5 @@
 /* Add here all your css styles (customizations) */
-/* The Resources link navigates; its adjacent disclosure opens the sections. */
+/* Resources opens its sections on mobile; the title also links on desktop. */
 .site-resources-nav { position: relative; display: flex; align-items: center; flex-shrink: 0; }
 .site-resources-toggle { display: inline-flex; align-items: center; justify-content: center; width: 26px; min-height: 32px; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
 .site-resources-toggle > span { width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); }
